@@ -1,0 +1,42 @@
+doctype html
+html
+head
+	meta(charset="UTF-8")
+	link(rel="stylesheet" href="css/main.css")
+	link(rel="shortcut icon" type="image/x-icon" href="")
+	link(rel="icon" type="image/x-icon" href="")
+	title Dzianis Dzetko
+body
+	.wrapper
+		header
+			a(href="#" class="auth" style="display: inline-block;")Авторизоваться
+		.main
+			section.welcome
+				.card
+					.card_info
+						.user_info
+							.user_img
+								img(src="img/foto.jpg" class="user_foto")
+							.user_name Денис Детко
+							.user_desc Личный сайт веб разработчика
+							.user_social
+								ul.social_list
+									li.list_item
+										a.link(href="#")
+											svg.icon.vk
+												use(xlink:href='img/icons/vk.svg')
+									li.list_item
+										a.link(href="#")
+									li.list_item
+										a.link(href="#")
+							.user_menu
+								ul.menu_list
+									li.list_item
+										a.item_link(href="#") Мои работы
+									li.list_item
+										a.item_link(href="#") Обо мне
+									li.list_item
+										a.item_link(href="#") Блог
+
+	footer(class="footer")
+		.footer_text © Денис Детко | создано с любовью в LoftScool | 2016
