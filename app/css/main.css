@@ -75,6 +75,11 @@ header {
 .card {
 	width: 100%;
 	height: 100%;
+	
+}
+
+.main .welcome .card.card_front{
+	z-index: 2;
 }
 
 .card_info {
@@ -82,6 +87,7 @@ header {
 	height: 100%;
 	background-color: rgba(255, 255, 255, .85);
 	border-radius: 5px;
+	
 }
 
 .user_info {
@@ -113,7 +119,7 @@ header {
 }
 
 ul {
-
+	display: table;
 }
 
 ul li {
@@ -121,9 +127,25 @@ ul li {
 }
 
 .menu_list {
-	display: table;
-	width: 100%;
+	list-style: none;
 	padding: 0;
-	text-align: center;
-	height: 22px;
+	width: 100%;
+	display: table;
+	position: absolute;
+	bottom: 0;
+	margin: 0;
+}
+
+.menu_list .list_item {
+	display: table-cell;
+	border-right: 2px solid rgba(255, 255, 255, .85);
+	
+}
+
+.item_link {
+	height: 45px;
+	background-color: rgba(0, 191, 165, .85);
+	padding: 0 30px;
+	line-height: 45px;
+	display: block;
 }

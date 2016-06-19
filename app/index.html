@@ -1,37 +1,60 @@
 <!DOCTYPE html>
 <html></html>
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="shortcut icon" type="image/x-icon" href="">
-  <link rel="icon" type="image/x-icon" href="">
-  <title>Dzianis Dzetko</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/app.css">
+	<link rel="shortcut icon" type="image/x-icon" href="">
+	<link rel="icon" type="image/x-icon" href="">
+	<title>Dzianis Dzetko</title>
 </head>
-<body>
-  <div class="wrapper">
-    <header><a href="#" style="display: inline-block;" class="auth">Авторизоваться</a></header>
-    <div class="main">
-      <section class="welcome">
-        <div class="card">
-          <div class="card_info">
-            <div class="user_info">
-              <div class="user_img"><img src="img/foto.jpg" class="user_foto"></div>
-              <div class="user_name">Денис Детко</div>
-              <div class="user_desc">Личный сайт веб разработчика</div>
-              <div class="user_social">
-                <ul class="social_list">
-                  <li class="list_item"></li>
-                  <li class="list_item"></li>
-                  <li class="list_item"></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  </div>
-  <footer class="footer">
-    <div class="footer_text">© Денис Детко | создано с любовью в LoftScool | 2016</div>
-  </footer>
+<body class="animate">
+	<div class="wrapper">
+		<header class="header_welcome"><a href="#" style="display: inline-block;" class="auth">Авторизоваться</a></header>
+		<div class="main">
+			<div class="welcome">
+				<div class="flip-card">
+					<div class="flip-card_front">
+						<div class="card_info">
+							<div class="user_info">
+								<div class="user_img"><img src="img/foto.jpg" class="user_foto"></div>
+								<div class="user_name">Денис Детко</div>
+								<div class="user_desc">Личный сайт веб разработчика</div>
+								<div class="user_social">
+									<ul class="social_list">
+										<li class="social_item"><a href="#" class="social_link">
+												<svg width="25" heith="25" class="icon icon_vk">
+													<use xlink:href="../source/img/svg-sprite.svg#vk"></use>
+												</svg></a></li>
+										<li class="social_item"><a href="#" class="social_link">
+												<svg width="25" heith="25" class="icon icon_git">
+													<use xlink:href="../source/img/svg-sprite.svg#github"></use>
+												</svg></a></li>
+										<li class="social_item"><a href="#" class="social_link">
+												<svg width="25" heith="25" class="icon icon_in">
+													<use xlink:href="../source/img/svg-sprite.svg#in"></use>
+												</svg></a></li>
+									</ul>
+								</div>
+								<div class="user_menu">
+									<ul class="menu_list">
+										<li class="list_item"><a href="works.html" class="item_link">Мои работы</a></li>
+										<li class="list_item"><a href="#" class="item_link">Обо мне</a></li>
+										<li class="list_item"><a href="#" class="item_link">Блог</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="flip-card_back">
+						<div class="login_txt"> </div>
+						<form class="login_form"></form>
+						<ul class="login_buttons"></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer_welcome">
+			<div class="footer_text">© Денис Детко | создано с любовью в LoftScool | 2016</div>
+		</footer>
+	</div>
 </body>
