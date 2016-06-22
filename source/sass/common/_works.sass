@@ -46,6 +46,9 @@
 	
 .menu_svg
 	fill: #fff
+	opacity: .5
+	&:hover
+		opacity: 1
 
 .info-box_user
 	width: 100%
@@ -259,11 +262,6 @@
 .works_img
 	width: 100%
 	height: 100%
-	position: absolute
-	top: 0
-	bottom: 0
-	left: 0
-	right: 0
 	  
 .works_controls
 	width: 100%
@@ -284,10 +282,10 @@
 /* 			Talks about me: 		*/
 /* =================================*/
 	 	
-.talks
-	background-image: url(../img/bg_about.jpg)
+.talks, .blur
 	width: 100%
 	height: 1290px  
+	background: url("../img/bg_about.jpg")
 
 .talks_title
 	position: relative
@@ -296,14 +294,15 @@
 	height: 185px 
 	line-height: 185px; 
 
-.talks_title_txt
+.about_title_txt
 	position: relative
 	display: inline-block 
 	z-index: 2
 	color: #373E42
 	font-family: "bernierregular_regular"
-	font-size: 55px 
+	font-size: 63px 
 	font-weight: normal 
+	padding-top: 10px 
 	width: 380px 
 	line-height: 1 
 	&:before,
@@ -316,17 +315,18 @@
 		background-color: #373E42
 		opacity: .4
 		position: absolute
-		top: 25px
+		top: 39px
 	&:after
 		right: 25px
 	&:before
 		left: 25px
 
-.talks_title_img
+.about_title_img
 	z-index: 1
 	position: absolute
 	top: 0
 	margin-left: -250px 
+	padding-top: 30px 
 	opacity: .1 
 	height: 175px
 	width: 500px 
@@ -351,7 +351,7 @@
 	
 .review
 	width: 50% 
-	margin: 0
+	margin: 60px auto 0
 	padding: 0 10px  
 		
 .review_txt
@@ -366,10 +366,7 @@
 		margin-bottom: 30px
 
 .review_author
-	margin-top: 20px 
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	margin-top: 40px 
 	&:before,
 	&:after
 		content: " "
@@ -389,8 +386,95 @@
 	color: #00bfa5
 	
 
-.contact_form
+.feedback_form
+	min-height: 440px
+	width: 380px 
+	margin: 70px auto 0
+	position: relative
+	top: 0
+	border-radius: 5px
+	overflow: hidden
 	
+.blur
+	position: absolute
+	bottom: 0
+	height: 100% 
+	z-index: 0
+	background-position: center calc(100% + 450px + 200px)
+	-webkit-filter: blur(3px)
+	filter: blur(3px)
+	&:after 
+		content: ''
+		height: 100%
+		width: 100%
+		background: rgba(255,255,255,.3)
+		position: absolute
+
+		
+.feedback_wrapper
+	padding: 0 20px 
+	position: relative
+	z-index: 1 
+
+.feedback_title
+	margin: 40px 0 
+	font-size: 35px
+	&:before,
+	&:after
+		content: ""
+		height: 5px
+		width: 22px
+		display: inline-block
+		vertical-align: middle
+		background-color: #373E42
+		opacity: .4
+		position: absolute
+		top: 20px
+	&:after
+		right: 20px
+	&:before
+		left: 20px
+
+.feedback_field
+	border-radius: 5px
+	display: block
+	margin: 20px auto
+	padding: 15px
+	border: 0
+	width: 100% 
+	box-sizing: border-box
+	font: inherit
+	
+.feedback_textarea
+	height: 140px 
+	
+.feedback_buttons
+	position: relative
+	width: 100% 
+	&:before,
+	&:after
+		content: " "
+		display: block
+	&:after
+		clear: both
+
+.button
+	float: left 
+	background: #00bfa5
+	border: 0
+	height: 45px
+	width: 50%
+	opacity: .85 
+	cursor: pointer 
+	font-family: "roboto_medium" 
+	color: #fff
+	font-size: 16px
+	&:first-child
+		border-right: 1px solid rgba(222, 227, 231, .5)
+	&:last-child
+		border-left: 1px solid rgba(222, 227, 231, .5)
+	&:hover
+		opacity: .3
 
 /* =================================*/
 /* 				Footer: 			*/
@@ -399,9 +483,13 @@
 	background: #373e42
 	opacity: .85
 	height: 145px  
+	position: absolute
+	width: 100% 
+	
 	
 .footer_menu
-	padding-top: 30px 
+	padding: 20px
+	border-bottom: 1px solid rgba(255,255,255,.1) 
 	&:before,
 	&:after
 		content: " "
@@ -411,14 +499,54 @@
 
 
 .footer_list
-	padding-left: 30px
+	padding: 0
 	margin: 0  
 	width: 50%
 	float: left   
+	height: 35px 
+	line-height: 35px 
+	font-family: "roboto_medium" 
 
 .footer_item
 	display: inline-block
 	padding-right: 40px 
 
 .footer_link
-	
+
+.footer_social-list
+	width: 50%;
+	padding: 0;
+	float: right;
+	margin: 0;
+	text-align: right 
+	height: 35px 
+
+.footer_social-item
+
+.footer_social-links
+
+.footer_svg
+	width: 35px
+	height: 35px  
+	fill: #fff
+	padding-left: 10px 
+
+.footer_copyright
+	font-family: "roboto_light" 
+	padding: 10px 20px
+	&:before,
+	&:after
+		content: " "
+		display: block
+	&:after
+		clear: both
+
+.footer_info
+	float: left
+	width: 40% 
+
+.footer_about
+	float: right
+	width: 50% 
+	text-align: right 
+	padding-top: 15px 

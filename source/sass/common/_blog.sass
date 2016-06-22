@@ -1,0 +1,96 @@
+/* =================================*/
+/* 				Blog: 				*/
+/* =================================*/
+
+.blog_title
+	position: relative
+
+.blog_txt
+	color: #fff
+	font-size: 63px
+	position: relative
+	z-index: 1 
+	margin: 20px 40% 
+	&:before,
+	&:after
+		content: ""
+		height: 5px
+		width: 22px
+		display: inline-block
+		vertical-align: middle
+		background-color: #fff
+		opacity: .4
+		position: absolute
+		top: 37px
+	&:after
+		right: 80%
+	&:before
+		left: 80%
+
+.blog_svg
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -45%)
+	width: 324px
+	height: 230px
+	fill: #fff
+	opacity: .2  
+	
+.blog_desc
+	color: #fff
+	
+.blog
+	margin-top: 50px 
+	&:before,
+	&:after
+		content: " "
+		display: block
+	&:after
+		clear: both
+
+.blog_chapters
+	width: 25% 
+	float: left 
+
+.chapters_list
+	text-align: right
+	margin: 0
+	padding: 0   
+
+.chapters_item  
+
+.chapters_link
+	color: #455A64
+	font-family: "roboto_regular"
+	padding: 15px 20px 
+	display: block 
+	&:hover
+		color: #00BFA5
+		border-right: 3px solid #00BFA5
+		
+.blog_posts
+	width: 75% 
+	float: right
+	padding: 0 100px
+	box-sizing: border-box 
+	margin-bottom: 82px 
+
+.blog_article
+	margin-bottom: 60px
+	padding-bottom: 60px 
+	border-bottom: 3px solid rgba(202, 43, 66, .1)
+
+.article_title
+	margin-top: 0
+	font-size: 35px
+	text-align: left  
+	margin-bottom: 17px
+
+.article_date
+	margin-bottom: 20px
+	color:  #00BFA5
+
+.article_text
+	margin-bottom: 15px
+

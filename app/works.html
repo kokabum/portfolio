@@ -49,7 +49,7 @@
 		</header>
 		<div class="box-title_works">
 			<div class="works_title">
-				<div class="works_txt">Мои Работы</div>
+				<h1 class="works_txt">Мои Работы</h1>
 				<svg class="works_svg">
 					<use xlink:href="../source/img/svg-sprite.svg#works_header"></use>
 				</svg>
@@ -62,7 +62,7 @@
 					<div class="project_skills">HTML, CSS, JAVASCRIPT</div><a href="#" class="project_link">Посмотреть сайт</a>
 				</div>
 			</div>
-			<div class="portfolio_slider"></div>
+			<div class="portfolio_slider"><img src="img/works/work1.png" class="works_img"></div>
 			<div class="portfolio_controls">
 				<div class="controls_prev">
 					<svg class="portf_arrow arrow_down">
@@ -80,8 +80,8 @@
 		</section>
 		<section class="talks">
 			<div class="talks_title">
-				<h1 class="talks_title_txt">Что обо мне говорят</h1>
-				<svg class="talks_title_img">
+				<h1 class="about_title_txt">Что обо мне говорят</h1>
+				<svg class="about_title_img">
 					<use xlink:href="../source/img/svg-sprite.svg#about_header"></use>
 				</svg>
 			</div>
@@ -107,18 +107,47 @@
 					</div>
 				</blockquote>
 			</div>
-			<div class="contact_form"></div>
+			<form class="feedback_form">
+				<div class="blur"></div>
+				<div class="feedback_wrapper">
+					<h2 class="feedback_title">Связаться со мной</h2>
+					<input type="text" name="name" placeholder="Имя" class="feedback_field">
+					<input type="text" name="email" placeholder="Email" class="feedback_field">
+					<textarea name="message" placeholder="Ваше сообщение" class="feedback_field feedback_textarea"></textarea>
+				</div>
+				<div class="feedback_buttons">
+					<input type="submit" value="Отправить" class="button">
+					<input type="reset" value="Очистить" class="button">
+				</div>
+			</form>
 		</section>
 	</div>
 	<footer class="footer">
 		<div class="footer_menu">
 			<ul class="footer_list">
-				<li class="footer_item"><a href="#" class="footer_link">Мои работы</a></li>
-				<li class="footer_item"><a href="#" class="footer_link">Обо мне</a></li>
-				<li class="footer_item"><a href="#" class="footer_link">Блог</a></li>
-				<li class="footer_item"><a href="#" class="footer_link">Автризация</a></li>
+				<li class="footer_item"><a href="works.html" class="footer_link">Мои работы</a></li>
+				<li class="footer_item"><a href="about.html" class="footer_link">Обо мне</a></li>
+				<li class="footer_item"><a href="blog.html" class="footer_link">Блог</a></li>
+				<li class="footer_item"><a href="index.html" class="footer_link">Авторизация</a></li>
+			</ul>
+			<ul class="footer_social-list">
+				<li class="footer_social-item"><a href="#" class="footer_social-links">
+						<svg class="footer_svg">
+							<use xlink:href="../source/img/svg-sprite.svg#vk_round"></use>
+						</svg></a></li>
+				<li class="footer_social-item"><a href="#" class="footer_social-links">
+						<svg class="footer_svg">
+							<use xlink:href="../source/img/svg-sprite.svg#github_round"></use>
+						</svg></a></li>
+				<li class="footer_social-item"><a href="#" class="footer_social-links">
+						<svg class="footer_svg">
+							<use xlink:href="../source/img/svg-sprite.svg#in_round"></use>
+						</svg></a></li>
 			</ul>
 		</div>
-		<div class="footer_copyright"></div>
+		<div class="footer_copyright">
+			<div class="footer_info">Я веб-разработчик из Минска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.</div>
+			<div class="footer_about">© Денис Детко | создано с любовью в LoftSchool | 2016</div>
+		</div>
 	</footer>
 </body>

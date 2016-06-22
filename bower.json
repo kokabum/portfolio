@@ -1,0 +1,21 @@
+{
+  "name": "portfolio",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Dzianis Dzetko <dzianis.dzetko@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/kokabum/portfolio",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.0.0",
+    "jquery-knob": "^1.2.13"
+  }
+}

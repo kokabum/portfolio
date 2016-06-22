@@ -1,0 +1,102 @@
+doctype html
+html
+head
+	meta(charset="UTF-8")
+	link(rel="stylesheet" href="css/app.css")
+	link(rel="shortcut icon" type="image/x-icon" href="")
+	link(rel="icon" type="image/x-icon" href="")
+	title Dzianis Dzetko
+body
+	.wrapper_works
+		header.header
+			.nav_wrapper
+				.nav_social
+					ul.nav_list
+						li.nav_item
+							a.nav_link(href="#")
+								svg.works_icon
+									use(xlink:href="../source/img/svg-sprite.svg#vk")
+						li.nav_item
+							a.nav_link(href="#")
+								svg.works_icon
+									use(xlink:href="../source/img/svg-sprite.svg#github")
+						li.nav_item
+							a.nav_link(href="#")
+								svg.works_icon
+									use(xlink:href="../source/img/svg-sprite.svg#in")
+				.nav_menu
+					svg.menu_svg(version="1.1" id="menu_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" heith="30px" viewBox="0 0 40 35" enable-background="new 0 0 40 35" xml:space="preserve")
+						path(d="M40,2.5C40,3.881,38.881,5,37.5,5h-35C1.119,5,0,3.881,0,2.5l0,0C0,1.119,1.119,0,2.5,0h35C38.881,0,40,1.119,40,2.5L40,2.5z")
+						path(d="M40,17.5c0,1.381-1.119,2.5-2.5,2.5h-35C1.119,20,0,18.881,0,17.5l0,0C0,16.119,1.119,15,2.5,15h35C38.881,15,40,16.119,40,17.5L40,17.5z")
+						path(d="M40,32.5c0,1.381-1.119,2.5-2.5,2.5h-35C1.119,35,0,33.881,0,32.5l0,0C0,31.119,1.119,30,2.5,30h35C38.881,30,40,31.119,40,32.5L40,32.5z")
+			.info-box_user
+				.info-box_img
+					img(src="img/foto.jpg" class="user_foto")
+				.blog_title
+					h1.blog_txt Блог
+					svg.blog_svg
+						use(xlink:href="../source/img/svg-sprite.svg#blog_header")
+					p.blog_desc Статьи, которые я написал
+			.about_bg
+				svg(class="about_bg_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 85" preserveAspectRatio="none")
+					polygon(fill="#fff" points="0,0   0,86   500.8,86   500.8,75.5")
+					polygon(fill="#fff" points="1000,0   1000,86   500,86   500,75.5")
+		section.blog
+			.blog_chapters
+				ul.chapters_list
+					li.chapters_item
+						a.chapters_link(href="#") Самое важное в SASS
+					li.chapters_item
+						a.chapters_link(href="#") Приёмы в вёрстке, без которых не обходится ни один сайт
+					li.chapters_item
+						a.chapters_link(href="#") Самый необходимый набор Gulp плагинов
+					li.chapters_item
+						a.chapters_link(href="#") Почему я выбрал Jade
+			.blog_posts
+				.blog_article
+					h1.article_title Самое важное в Sass
+					p.article_date 22 июня 2016
+					p.article_text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aliquid repellat, adipisci sit dolorum et a officia, minima consequuntur commodi, veritatis qui recusandae, voluptate quibusdam omnis delectus fuga placeat neque.
+					p.article_text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aliquid repellat, adipisci sit dolorum et a officia, minima consequuntur commodi, veritatis qui recusandae, voluptate quibusdam omnis delectus fuga placeat neque.
+				.blog_article
+					h1.article_title Приёмы в вёрстке, без которых не обходится ни один сайт
+					p.article_date 21 июня 2016
+					p.article_text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aliquid repellat, adipisci sit dolorum et a officia, minima consequuntur commodi, veritatis qui recusandae, voluptate quibusdam omnis delectus fuga placeat neque.
+					p.article_text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aliquid repellat, adipisci sit dolorum et a officia, minima consequuntur commodi, veritatis qui recusandae, voluptate quibusdam omnis delectus fuga placeat neque.
+				.blog_article
+					h1.article_title Самый необходимый набор Gulp плагинов
+					p.article_date 20 июня 2016
+					p.article_text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aliquid repellat, adipisci sit dolorum et a officia, minima consequuntur commodi, veritatis qui recusandae, voluptate quibusdam omnis delectus fuga placeat neque.
+					p.article_text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aliquid repellat, adipisci sit dolorum et a officia, minima consequuntur commodi, veritatis qui recusandae, voluptate quibusdam omnis delectus fuga placeat neque.
+				.blog_article
+					h1.article_title Почему я выбрал Jade
+					p.article_date 19 июня 2016
+					p.article_text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aliquid repellat, adipisci sit dolorum et a officia, minima consequuntur commodi, veritatis qui recusandae, voluptate quibusdam omnis delectus fuga placeat neque.
+					p.article_text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aliquid repellat, adipisci sit dolorum et a officia, minima consequuntur commodi, veritatis qui recusandae, voluptate quibusdam omnis delectus fuga placeat neque.
+	footer.footer
+		.footer_menu
+			ul.footer_list
+				li.footer_item
+					a.footer_link(href="works.html") Мои работы
+				li.footer_item
+					a.footer_link(href="about.html") Обо мне
+				li.footer_item
+					a.footer_link(href="blog.html") Блог
+				li.footer_item
+					a.footer_link(href="index.html") Авторизация
+			ul.footer_social-list
+				li.footer_social-item
+					a.footer_social-links(href="#")
+						svg.footer_svg
+							use(xlink:href="../source/img/svg-sprite.svg#vk_round")
+				li.footer_social-item
+					a.footer_social-links(href="#")
+						svg.footer_svg
+							use(xlink:href="../source/img/svg-sprite.svg#github_round")
+				li.footer_social-item
+					a.footer_social-links(href="#")
+						svg.footer_svg
+							use(xlink:href="../source/img/svg-sprite.svg#in_round")
+		.footer_copyright
+			.footer_info Я веб-разработчик из Минска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+			.footer_about © Денис Детко | создано с любовью в LoftSchool | 2016
