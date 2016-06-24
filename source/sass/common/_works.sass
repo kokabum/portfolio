@@ -1,8 +1,13 @@
+@import '_mixins.sass'
+
+@function rem($px)
+	@return $px / 16px + 0rem
+
 /* =================================*/
 /* 				Works: 				*/
 /* =================================*/
 .wrapper_works
-	margin-bottom: -145px 
+	margin-bottom: rem(-145px) 
 
 .header
 	background-image: url(../img/bg.jpg)
@@ -11,6 +16,8 @@
 	
 .nav_wrapper
 	padding: 30px 
+	position: relative
+	z-index: 1 
 	&:before,
 	&:after
 		content: " "
@@ -27,7 +34,7 @@
 	
 .nav_item
 	display: inline-block
-	padding-right: 30px 
+	padding-right: 19px 
 
 .nav_link
 	opacity: .5
@@ -35,10 +42,13 @@
 		opacity: 1 
 
 .works_icon
-	height: 25px
-	width: 30px
+	height: 22px
+	width: 32px
 	fill: #fff  
 	transform-origin: 50% 50% 0px;
+	+phone
+		width: 26px
+		height: 18px  
 
 .nav_menu
 	cursor: pointer
@@ -47,13 +57,20 @@
 .menu_svg
 	fill: #fff
 	opacity: .5
+	width: 40px
+	height: 30px   
 	&:hover
 		opacity: 1
+	+phone
+		width: 30px
+		height: 22px  
 
 .info-box_user
 	width: 100%
 	text-align: center
 	padding-top: 50px 
+	position: relative
+	z-index: 1
 
 .info-box_img
 	left: 50%
@@ -61,29 +78,43 @@
 
 .info-box_name
 	font-size: 35px
-	margin-top: 30px
+	margin-top: 12px
 	color: #fff
 	font-family: "roboto_medium" 
 
 .info-box_desc
-	margin-top: 10px
 	color: #fff
 	opacity: .8 
 	font-family: "roboto_light"
 	
+.header_svg
+	fill: #fff
+	width: 90%
+	position: absolute
+	opacity: .1
+	height: 100%
+	top: -9%
+	left: 50%
+	transform: translate(-50%) 
+	+tablet
+		display: none
+
+	
 .icon_arrow
-	height: 20px
-	width: 20px  
+	height: 25px
+	width: 25px  
 	fill: #fff
 	left: 50% 
 	margin-left: -10px 
 	position: absolute
 	cursor: pointer 
-	bottom: 200px
+	bottom: 10%
 	opacity: .7
 	&:hover
 		opacity: 1 
 	z-index: 1
+	+tablet
+		bottom: 4%
 	
 
 .icon_bg
@@ -94,6 +125,9 @@
 	width: 100% 
 	bottom: -131px
 	fill: #FAF8F0
+	+tablet
+		height: 159px
+		bottom: -82px  
 	 
 .box-title_works
 
@@ -101,9 +135,13 @@
 	position: relative
 	display: block
 	text-align: center
-	height: 185px 
 	line-height: 131px; 
 	background-color: #FAF8F0
+	height: 160px 
+	+tablet
+		height:  100%
+	+phone
+		line-height: 100px 
 
 .works_txt
 	position: relative
@@ -112,8 +150,7 @@
 	text-transform: uppercase
 	color: #373E42
 	font-family: "bernierregular_regular"
-	font-size: 62px 
-	padding-top: 25px 
+	font-size: 62px  
 	&:before,
 	&:after
 		content: ""
@@ -123,17 +160,28 @@
 		vertical-align: middle
 		background-color: #373E42
 		opacity: .4
-		margin-right: 30px
-		margin-left: 30px  
+		margin-right: 3%
+		margin-left: 3%  
+	+tablet
+		font-size: 48px
+	+phone
+		font-size: 35px
+		
 	
 .works_svg
 	z-index: 1
 	position: absolute
-	top: 0
+	top: -15%
 	margin-left: -250px 
 	opacity: .1 
 	height: 164px
 	width: 500px  
+	+tablet
+		width: 518px
+		height: 131px 
+	+phone
+		height: 100px  
+
 	
 /* =================================*/
 /* 				Portfolio: 			*/
@@ -159,6 +207,9 @@
 		vertical-align: middle
 		height: 100%
 		width: 0
+	+tablet
+		float: none
+		width: 100% 
 	
 .project
 	display: inline-block
@@ -166,10 +217,30 @@
 	width: 70%
 	padding-left: 15%  
 	text-align: center 
+	
+
 
 .project_name
 	font-family: "bernierregular_regular"
-	font-size: 35px 
+	font-size: rem(35px) 
+	color: #373E42
+	position: relative
+	padding: 0 20% 
+	&:before,
+	&:after
+		content: ""
+		height: 5px
+		width: 22px
+		display: inline-block
+		vertical-align: middle
+		background-color: #373E42
+		opacity: .4
+		position: absolute
+		top: 18px
+	&:after
+		right: 10%
+	&:before
+		left: 10%
 
 .project_skills
 	font-family: "roboto_medium"
@@ -203,6 +274,10 @@
 	overflow: hidden
 	float: right 
 	background: #EFEBE0 
+	position: relative
+	+tablet
+		float: none
+		width: 100%
 
 .portfolio_controls
 	height: 30%
@@ -215,7 +290,9 @@
 		display: block
 	&:after
 		clear: both
-	
+	+tablet
+		float: none
+		width: 100%
 .controls_prev
 	position: relative
 	float: left 
@@ -260,8 +337,14 @@
 	fill: #fff
 	
 .works_img
-	width: 100%
-	height: 100%
+	max-width: 100%
+	max-height: 100%
+	position: absolute
+	bottom: 0
+	top: 0
+	left: 0
+	right: 0
+	margin: auto   
 	  
 .works_controls
 	width: 100%
@@ -317,9 +400,18 @@
 		position: absolute
 		top: 39px
 	&:after
-		right: 25px
+		right: 2%
 	&:before
-		left: 25px
+		left: 2%
+	+tablet
+		font-size: 49px
+		width: 65%
+		&:before,
+		&:after
+			top: 50%
+	+phone
+		font-size: 35px 
+		width: 56% 
 
 .about_title_img
 	z-index: 1
@@ -331,6 +423,11 @@
 	height: 175px
 	width: 500px 
 	left: 50%
+	+tablet
+		height: 140px
+		padding: 0  
+	+phone
+		height: 100px 
 	
 .reviews
 	width: 60% 
@@ -342,20 +439,40 @@
 		display: block
 	&:after
 		clear: both
+	+desktop
+		width: 68%
+	+laptop
+		width: 80%
+	+tablet
+		font-size: 14px
+		width: 95% 
+	+phone
+		display: block
+		margin: 0  
 		
 .review_left
 	float: left 
+	+phone
+		float: none
+		width: 100% 
 
 .review_right
 	float: right
+	+phone
+		float: none
+		width: 100% 
 	
 .review
 	width: 50% 
 	margin: 60px auto 0
 	padding: 0 10px  
+	+phone
+		width: 100%
+		margin: 0 
 		
 .review_txt
 	font-family: "roboto_regular"
+	color: #455A64
 	&:before
 		content: "\f10d"
 		font-family: "FontAwesome"
@@ -384,6 +501,7 @@
 	
 .author
 	color: #00bfa5
+	padding: 6% 0 
 	
 
 .feedback_form
@@ -485,6 +603,10 @@
 	height: 145px  
 	position: absolute
 	width: 100% 
+	+tablet
+		height: auto 
+	+phone
+		font-size: 13px 
 	
 	
 .footer_menu
@@ -506,10 +628,14 @@
 	height: 35px 
 	line-height: 35px 
 	font-family: "roboto_medium" 
+	+tablet
+		float: none
+		width: 100%  
+		text-align: center 
 
 .footer_item
 	display: inline-block
-	padding-right: 40px 
+	padding-right: 35px 
 
 .footer_link
 
@@ -520,6 +646,11 @@
 	margin: 0;
 	text-align: right 
 	height: 35px 
+	+tablet
+		float: none
+		width: 100% 
+		text-align: center 
+		margin-top: 10px 
 
 .footer_social-item
 
@@ -529,11 +660,14 @@
 	width: 35px
 	height: 35px  
 	fill: #fff
-	padding-left: 10px 
+	padding-left: 8px 
+	opacity: .7
+	&:hover
+		opacity: 1
 
 .footer_copyright
 	font-family: "roboto_light" 
-	padding: 10px 20px
+	padding: 15px 20px
 	&:before,
 	&:after
 		content: " "
@@ -544,9 +678,18 @@
 .footer_info
 	float: left
 	width: 40% 
+	+tablet
+		float: none
+		width: 100% 
+		text-align: center 
 
 .footer_about
 	float: right
 	width: 50% 
 	text-align: right 
 	padding-top: 15px 
+	+tablet
+		float: none
+		width: 100% 
+		text-align: center  
+	

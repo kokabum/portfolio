@@ -54,10 +54,10 @@ gulp.task('svgSpriteBuild', function() {
       mode: {
         symbol: {
           dest: './',     //base directory
-          sprite: 'source/img/svg-sprite',          //Sprite location
+          sprite: 'app/img/svg-sprite',          //Sprite location
           render: {
             scss: {
-              dest: 'source/css/common/svg-sprite', //CSS stylesheet location
+              dest: 'app/css/common/svg-sprite', //CSS stylesheet location
             }
           }
         }

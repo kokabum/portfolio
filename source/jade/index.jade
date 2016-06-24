@@ -2,14 +2,14 @@ doctype html
 html
 head
 	meta(charset="UTF-8")
+	meta(name="viewport" content="width=device-width, initial-scale=1")
+	link(rel="shortcut icon" type="image/png" href="img/mount.png")
 	link(rel="stylesheet" href="css/app.css")
-	link(rel="shortcut icon" type="image/x-icon" href="")
-	link(rel="icon" type="image/x-icon" href="")
 	title Dzianis Dzetko
 body.animate
 	.wrapper
 		header.header_welcome
-			a(href="#" class="auth" style="display: inline-block;") Авторизоваться
+			a(href="#" class="auth") Авторизоваться
 		.main
 			.welcome
 				.flip-card
@@ -23,15 +23,15 @@ body.animate
 								li.social_item
 									a.social_link(href="#")
 										svg.icon.icon_vk(width="25" heith="25")
-											use(xlink:href="../source/img/svg-sprite.svg#vk")
+											use(xlink:href="img/svg-sprite.svg#vk")
 								li.social_item
 									a.social_link(href="#")
 										svg.icon.icon_git(width="25" heith="25")
-											use(xlink:href="../source/img/svg-sprite.svg#github")
+											use(xlink:href="img/svg-sprite.svg#github")
 								li.social_item
 									a.social_link(href="#")
 										svg.icon.icon_in(width="25" heith="25")
-											use(xlink:href="../source/img/svg-sprite.svg#in")
+											use(xlink:href="img/svg-sprite.svg#in")
 						ul.menu_list
 							li.list_item
 								a.item_link(href="works.html") Мои работы

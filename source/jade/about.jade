@@ -2,9 +2,9 @@ doctype html
 html
 head
 	meta(charset="UTF-8")
+	meta(name="viewport" content="width=device-width, initial-scale=1")
+	link(rel="shortcut icon" type="image/png" href="img/mount.png")
 	link(rel="stylesheet" href="css/app.css")
-	link(rel="shortcut icon" type="image/x-icon" href="")
-	link(rel="icon" type="image/x-icon" href="")
 	title Dzianis Dzetko
 body
 	.wrapper_works
@@ -15,15 +15,15 @@ body
 						li.nav_item
 							a.nav_link(href="#")
 								svg.works_icon
-									use(xlink:href="../source/img/svg-sprite.svg#vk")
+									use(xlink:href="img/svg-sprite.svg#vk")
 						li.nav_item
 							a.nav_link(href="#")
 								svg.works_icon
-									use(xlink:href="../source/img/svg-sprite.svg#github")
+									use(xlink:href="img/svg-sprite.svg#github")
 						li.nav_item
 							a.nav_link(href="#")
 								svg.works_icon
-									use(xlink:href="../source/img/svg-sprite.svg#in")
+									use(xlink:href="img/svg-sprite.svg#in")
 				.nav_menu
 					svg.menu_svg(version="1.1" id="menu_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" heith="30px" viewBox="0 0 40 35" enable-background="new 0 0 40 35" xml:space="preserve")
 						path(d="M40,2.5C40,3.881,38.881,5,37.5,5h-35C1.119,5,0,3.881,0,2.5l0,0C0,1.119,1.119,0,2.5,0h35C38.881,0,40,1.119,40,2.5L40,2.5z")
@@ -35,7 +35,7 @@ body
 				.info-box_name Денис Детко
 				.info-box_desc Личный сайт веб разработчика
 			svg.icon_arrow
-				use(xlink:href="../source/img/svg-sprite.svg#arrow_down")
+				use(xlink:href="img/svg-sprite.svg#arrow_down")
 			.about_bg
 				svg(class="about_bg_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 85" preserveAspectRatio="none")
 					polygon(fill="#f0efe9" points="0,0   0,86   500.8,86   500.8,75.5")
@@ -43,9 +43,9 @@ body
 		section.about_me
 			.biography
 				.biography_title
-					h1.about_title_txt.about_me_txt Обо мне
+					h1.about_me_txt Обо мне
 					svg.about_title_img.about_me_svg
-						use(xlink:href="../source/img/svg-sprite.svg#about_header")
+						use(xlink:href="img/svg-sprite.svg#about_header")
 				img.biography_img(src="img/my_foto.jpg")
 				h2.biography_name Кто я
 				p.biography_text Я веб разработчик из Санкт-Петербруга. Мне 24 года. Я занимаюсь разработкой соверменных сайтов и приложений. Мне нравится делать интересные и современные проекты.
@@ -57,58 +57,58 @@ body
 					.group_name Frontend
 					.group_item
 						span.item_name HTML5
-						svg.g-circles(width="125" height="125")
-							circle(r="50" cx="65" cy="65" stroke="#ccc" fill="none")
-							circle.sector(r="50" cx="65" cy="65" stroke="#10C1A8" transform="rotate(-90 65 65)")
+						svg.g-circles(width="120" height="120")
+							circle(r="45" cx="60" cy="60" stroke="#ccc" fill="none")
+							circle.sector(r="45" cx="60" cy="60" stroke="#10C1A8" transform="rotate(-90 60 60)")
 					.group_item
 						span.item_name CSS3
-						svg.g-circles(width="125" height="125")
-							circle(r="50" cx="65" cy="65" stroke="#ccc" fill="none")
-							circle.sector(r="50" cx="65" cy="65" stroke="#10C1A8" transform="rotate(-90 65 65)")
+						svg.g-circles(width="120" height="120")
+							circle(r="45" cx="60" cy="60" stroke="#ccc" fill="none")
+							circle.sector(r="45" cx="60" cy="60" stroke="#10C1A8" transform="rotate(-90 60 60)")
 					.group_item
 						span.item_name JavaScript & jQuery
-						svg.g-circles(width="125" height="125")
-							circle(r="50" cx="65" cy="65" stroke="#ccc" fill="none")
-							circle.sector(r="50" cx="65" cy="65" stroke="#10C1A8" transform="rotate(-90 65 65)")
+						svg.g-circles(width="120" height="120")
+							circle(r="45" cx="60" cy="60" stroke="#ccc" fill="none")
+							circle.sector(r="45" cx="60" cy="60" stroke="#10C1A8" transform="rotate(-90 60 60)")
 				.skills_group
 					.group_name Backend
 					.group_item
 						span.item_name PHP
-						svg.g-circles(width="125" height="125")
-							circle(r="50" cx="65" cy="65" stroke="#ccc" fill="none")
-							circle.sector(r="50" cx="65" cy="65" stroke="#10C1A8" transform="rotate(-90 65 65)")
+						svg.g-circles(width="120" height="120")
+							circle(r="45" cx="60" cy="60" stroke="#ccc" fill="none")
+							circle.sector(r="45" cx="60" cy="60" stroke="#10C1A8" transform="rotate(-90 60 60)")
 					.group_item
 						span.item_name mySQL
-						svg.g-circles(width="125" height="125")
-							circle(r="50" cx="65" cy="65" stroke="#ccc" fill="none")
-							circle.sector(r="50" cx="65" cy="65" stroke="#10C1A8" transform="rotate(-90 65 65)")
+						svg.g-circles(width="120" height="120")
+							circle(r="45" cx="60" cy="60" stroke="#ccc" fill="none")
+							circle.sector(r="45" cx="60" cy="60" stroke="#10C1A8" transform="rotate(-90 60 60)")
 					.group_item
 						span.item_name.name_js Node.js & npm
-						svg.g-circles(width="125" height="125")
-							circle(r="50" cx="65" cy="65" stroke="#ccc" fill="none")
-							circle.sector(r="50" cx="65" cy="65" stroke="#10C1A8" transform="rotate(-90 65 65)")
+						svg.g-circles(width="120" height="120")
+							circle(r="45" cx="60" cy="60" stroke="#ccc" fill="none")
+							circle.sector(r="45" cx="60" cy="60" stroke="#10C1A8" transform="rotate(-90 60 60)")
 					.group_item
 						span.item_name.name_js Mongo.db
-						svg.g-circles(width="125" height="125")
-							circle(r="50" cx="65" cy="65" stroke="#ccc" fill="none")
-							circle.sector(r="50" cx="65" cy="65" stroke="#10C1A8" transform="rotate(-90 65 65)")
+						svg.g-circles(width="120" height="120")
+							circle(r="45" cx="60" cy="60" stroke="#ccc" fill="none")
+							circle.sector(r="45" cx="60" cy="60" stroke="#10C1A8" transform="rotate(-90 60 60)")
 				.skills_group
 					.group_name WorkFlow
 					.group_item
 						span.item_name Git
-						svg.g-circles(width="125" height="125")
-							circle(r="50" cx="65" cy="65" stroke="#ccc" fill="none")
-							circle.sector(r="50" cx="65" cy="65" stroke="#10C1A8" transform="rotate(-90 65 65)")
+						svg.g-circles(width="120" height="120")
+							circle(r="45" cx="60" cy="60" stroke="#ccc" fill="none")
+							circle.sector(r="45" cx="60" cy="60" stroke="#10C1A8" transform="rotate(-90 60 60)")
 					.group_item
 						span.item_name Gulp
-						svg.g-circles(width="125" height="125")
-							circle(r="50" cx="65" cy="65" stroke="#ccc" fill="none")
-							circle.sector(r="50" cx="65" cy="65" stroke="#10C1A8" transform="rotate(-90 65 65)")
+						svg.g-circles(width="120" height="120")
+							circle(r="45" cx="60" cy="60" stroke="#ccc" fill="none")
+							circle.sector(r="45" cx="60" cy="60" stroke="#10C1A8" transform="rotate(-90 60 60)")
 					.group_item
 						span.item_name Bower
-						svg.g-circles(width="125" height="125")
-							circle(r="50" cx="65" cy="65" stroke="#ccc" fill="none")
-							circle.sector(r="50" cx="65" cy="65" stroke="#10C1A8" transform="rotate(-90 65 65)")
+						svg.g-circles(width="120" height="120")
+							circle(r="45" cx="60" cy="60" stroke="#ccc" fill="none")
+							circle.sector(r="45" cx="60" cy="60" stroke="#10C1A8" transform="rotate(-90 60 60)")
 		section.contacts_map
 			.map
 				iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2353.8615927720634!2d27.45672251585731!3d53.84532558008657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbd09d07832649%3A0x6eebbeadd8582347!2z0YPQuy4g0KHQu9C-0LHQvtC00YHQutCw0Y8gMTM3LCDQnNC40L3RgdC6!5e0!3m2!1sru!2sby!4v1466521986291" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen)
@@ -117,19 +117,19 @@ body
 				ul.contacts_list
 					li.contacts_item
 						svg.contacts_svg
-							use(xlink:href="../source/img/svg-sprite.svg#skype")
+							use(xlink:href="img/svg-sprite.svg#skype")
 						a.contacts_link(href="#") thesamueljacksonfive
 					li.contacts_item
 						svg.contacts_svg
-							use(xlink:href="../source/img/svg-sprite.svg#envelope")
+							use(xlink:href="img/svg-sprite.svg#envelope")
 						a.contacts_link(href="#") dzianis.dzetko@gmail.com
 					li.contacts_item
 						svg.contacts_svg
-							use(xlink:href="../source/img/svg-sprite.svg#phone")
+							use(xlink:href="img/svg-sprite.svg#phone")
 						a.contacts_link(href="#") +375 29 322 59 69
 					li.contacts_item
 						svg.contacts_svg
-							use(xlink:href="../source/img/svg-sprite.svg#map_marker")
+							use(xlink:href="img/svg-sprite.svg#map_marker")
 						a.contacts_link(href="#") Беларусь, Минск
 				
 
@@ -148,15 +148,15 @@ body
 				li.footer_social-item
 					a.footer_social-links(href="#")
 						svg.footer_svg
-							use(xlink:href="../source/img/svg-sprite.svg#vk_round")
+							use(xlink:href="img/svg-sprite.svg#vk_round")
 				li.footer_social-item
 					a.footer_social-links(href="#")
 						svg.footer_svg
-							use(xlink:href="../source/img/svg-sprite.svg#github_round")
+							use(xlink:href="img/svg-sprite.svg#github_round")
 				li.footer_social-item
 					a.footer_social-links(href="#")
 						svg.footer_svg
-							use(xlink:href="../source/img/svg-sprite.svg#in_round")
+							use(xlink:href="img/svg-sprite.svg#in_round")
 		.footer_copyright
 			.footer_info Я веб-разработчик из Минска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
 			.footer_about © Денис Детко | создано с любовью в LoftSchool | 2016

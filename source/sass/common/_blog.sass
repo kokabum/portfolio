@@ -1,3 +1,5 @@
+@import '_mixins.sass'
+
 /* =================================*/
 /* 				Blog: 				*/
 /* =================================*/
@@ -10,7 +12,7 @@
 	font-size: 63px
 	position: relative
 	z-index: 1 
-	margin: 20px 40% 
+	margin: 10px 40% 0
 	&:before,
 	&:after
 		content: ""
@@ -21,11 +23,26 @@
 		background-color: #fff
 		opacity: .4
 		position: absolute
-		top: 37px
+		top: 50%
 	&:after
-		right: 80%
+		right: 75%
 	&:before
-		left: 80%
+		left: 75%
+	+desktop
+		&:after
+			right: 80%
+		&:before
+			left: 80%
+	+laptop
+		&:after
+			right: 100%
+		&:before
+			left: 95%
+	+tablet
+		font-size: 49px
+	+phone
+		font-size: 35px
+		 
 
 .blog_svg
 	position: absolute
@@ -36,9 +53,15 @@
 	height: 230px
 	fill: #fff
 	opacity: .2  
+	+tablet
+		height: 172px 
+	+phone
+		height: 135px 
 	
 .blog_desc
 	color: #fff
+	+tablet
+		font-size: 14px
 	
 .blog
 	margin-top: 50px 
@@ -52,6 +75,9 @@
 .blog_chapters
 	width: 25% 
 	float: left 
+	+tablet
+		float: none
+		display: none 
 
 .chapters_list
 	text-align: right
@@ -75,21 +101,39 @@
 	padding: 0 100px
 	box-sizing: border-box 
 	margin-bottom: 82px 
+	+tablet
+		float: none
+		width: 100%
+		padding: 0 5%  
 
 .blog_article
 	margin-bottom: 60px
 	padding-bottom: 60px 
-	border-bottom: 3px solid rgba(202, 43, 66, .1)
+	border-bottom: 3px solid rgba(0, 0, 0, .1)
+	&:last-child
+		border-bottom: none
+		padding-bottom: 93px 
+	+tablet
+		font-size: 14px 
+		margin-bottom: 45px
+		padding-bottom: 45px  
 
 .article_title
 	margin-top: 0
 	font-size: 35px
 	text-align: left  
-	margin-bottom: 17px
+	margin-bottom: 15px
+	+tablet
+		font-size: 30px
+		margin-bottom: 10px
+	+phone
+		font-size: 21px
 
 .article_date
 	margin-bottom: 20px
 	color:  #00BFA5
+	+tablet
+		margin-bottom: 20px
 
 .article_text
 	margin-bottom: 15px

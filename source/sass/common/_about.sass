@@ -1,3 +1,5 @@
+
+
 /* =================================*/
 /* 				About Me: 			*/
 /* =================================*/
@@ -6,6 +8,8 @@
 	bottom: 0
 	width: 100%
 	margin-bottom: -4px  
+	
+	
 
 .about_me
 	background-color: #F0EFE9
@@ -19,10 +23,13 @@
 .biography
 	width: 50%  
 	box-sizing: border-box
-	padding: 0 80px 40px  
+	padding: 0 5% 3%  
 	background-color: #F0EFE9
 	float: left
 	height: 100% 
+	+tablet
+		width: 100%
+		float: none 
 	
 
 .biography_title
@@ -31,39 +38,13 @@
 	text-align: center
 	
 .about_me_txt
-	margin: 30px 
-	
-.about_me_svg 
-	padding: 0
-	top: 50%
-	left: 50%
-	width: 100%
-	-webkit-transform: translate(-11%,-60%)
-	-ms-transform: translate(-11%,-60%)
-	transform: translate(-11%,-60%)
-	
-.biography_img
-	margin: 40px auto 0
-	width: 100%  
-
-.biography_name
-	font-size: 35px
-
-.biography_text
-	margin-bottom: 20px
-
-.skills
-	background-color: #efebe0
-	float: right 
-	padding: 0 40px 40px
-	box-sizing: border-box
-	width: 50% 
-	height: 100%
-	
-.skills_title
-	font-size: 35px
+	margin: 40px 
 	position: relative
-	margin: 40px 220px 
+	display: inline-block
+	z-index: 2
+	font-size: 63px
+	width: auto
+	line-height: 1
 	&:before,
 	&:after
 		content: ""
@@ -74,11 +55,109 @@
 		background-color: #373E42
 		opacity: .4
 		position: absolute
-		top: 20px
+		top: 50%
 	&:after
-		right: -20px
+		right: -35%
 	&:before
-		left: -20px
+		left: -35%
+	+tablet
+		font-size: 63px
+	+desktop
+		font-size: 55px
+	
+.about_me_svg 
+	padding: 0
+	top: 50%
+	left: 50%
+	width: 100%
+	-webkit-transform: translate(-48%,-60%)
+	-ms-transform: translate(-48%,-60%)
+	transform: translate(-48%,-60%)
+	margin: 0 
+	+tablet
+		width: 50% 
+	+phone
+		width: 90% 
+	
+.biography_img
+	margin: 40px auto 0
+	width: 100%  
+
+.biography_name
+	font-size: 35px
+	margin: 30px auto
+	width: 30%
+	position: relative
+	&:before,
+	&:after
+		content: ""
+		height: 5px
+		width: 22px
+		display: inline-block
+		vertical-align: middle
+		background-color: #373E42
+		opacity: .4
+		position: absolute
+		top: 50%
+	&:after
+		right: 0
+	&:before
+		left: 0
+	+tablet
+		font-size: 30px
+	+phone
+		font-size: 21px 
+
+.biography_text
+	margin-bottom: 20px
+	color: #455A64
+	+tablet
+		font-size: 14px 
+
+.skills
+	background-color: #efebe0
+	float: right 
+	padding: 0 40px 40px
+	box-sizing: border-box
+	width: 50% 
+	height: 100%
+	+tablet
+		width: 100%
+		float: none
+		text-align: center 
+	
+.skills_title
+	font-size: 35px
+	position: relative
+	margin: 0 auto
+	width: 41%  
+	&:before,
+	&:after
+		content: ""
+		height: 5px
+		width: 22px
+		display: inline-block
+		vertical-align: middle
+		background-color: #373E42
+		opacity: .4
+		position: absolute
+		top: 50%
+	&:after
+		right: -35px
+	&:before
+		left: -35px
+	+tablet
+		padding-top: 40px
+		padding-bottom: 40px 
+		font-size: 30px 
+	+phone
+		width: 72%
+		font-size: 21px
+		
+.skills_text
+	color: #455A64
+	+tablet
+		font-size: 14px 
 		
 .skills_group
 	margin-bottom: 40px 
@@ -88,6 +167,8 @@
 	font-size: 28px
 	color: #455A64 
 	margin: 30px 0 
+	+tablet
+		font-size: 21px 
 
 .group_item
 	display: inline-block
@@ -136,10 +217,22 @@
 	left: 50%
 	transform: translate(-50%, -50%) 
 	border-radius: 5px
+	+tablet
+		width: 340px 
+	+phone
+		width: 100%
+		top: 0
+		transform: none
+		left: 0
+		padding: 0
+		background-color: rgba(255,255,255, 1)     
 
 .contacts_title
 	font-size: 35px
 	margin-top: 0 
+	position: relative
+	margin: 0 auto
+	width: 60%  
 	&:before,
 	&:after
 		content: ""
@@ -150,11 +243,17 @@
 		background-color: #373E42
 		opacity: .4
 		position: absolute
-		top: 59px
+		top: 50%
 	&:after
-		right: 127px
+		right: 0
 	&:before
-		left: 127px
+		left: 0
+	+phone
+		width: 50% 
+		&:after
+			right: 5%
+		&:before
+			left: 5%
 
 .contacts_list
 	padding: 0 
@@ -174,3 +273,6 @@
 	width: 25px
 	height: 25px  
 	fill: #10C1A8
+	+phone
+		width: 21px
+		height: 21px  
