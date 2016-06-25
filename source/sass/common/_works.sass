@@ -8,6 +8,8 @@
 /* =================================*/
 .wrapper_works
 	margin-bottom: rem(-145px) 
+	+tablet
+		margin-bottom: -230px 
 
 .header
 	background-image: url(../img/bg.jpg)
@@ -58,7 +60,7 @@
 	fill: #fff
 	opacity: .5
 	width: 40px
-	height: 30px   
+	height: 35px
 	&:hover
 		opacity: 1
 	+phone
@@ -78,7 +80,7 @@
 
 .info-box_name
 	font-size: 35px
-	margin-top: 12px
+	margin-top: 15px
 	color: #fff
 	font-family: "roboto_medium" 
 
@@ -108,7 +110,7 @@
 	margin-left: -10px 
 	position: absolute
 	cursor: pointer 
-	bottom: 10%
+	bottom: 9%
 	opacity: .7
 	&:hover
 		opacity: 1 
@@ -121,10 +123,13 @@
 	position: absolute
 	left: 0
 	right: 0 
-	height: 254px 
+	height: 282px 
 	width: 100% 
-	bottom: -131px
+	bottom: -146px
 	fill: #FAF8F0
+	+desktop
+		height: 210px 
+		bottom: -108px
 	+tablet
 		height: 159px
 		bottom: -82px  
@@ -135,9 +140,9 @@
 	position: relative
 	display: block
 	text-align: center
-	line-height: 131px; 
+	line-height: 148px; 
 	background-color: #FAF8F0
-	height: 160px 
+	height: 168px 
 	+tablet
 		height:  100%
 	+phone
@@ -160,8 +165,8 @@
 		vertical-align: middle
 		background-color: #373E42
 		opacity: .4
-		margin-right: 3%
-		margin-left: 3%  
+		margin-right: 2%
+		margin-left: 2%  
 	+tablet
 		font-size: 48px
 	+phone
@@ -174,7 +179,7 @@
 	top: -15%
 	margin-left: -250px 
 	opacity: .1 
-	height: 164px
+	height: 178px
 	width: 500px  
 	+tablet
 		width: 518px
@@ -195,6 +200,8 @@
 		display: block
 	&:after
 		clear: both
+	+tablet
+		position: relative
 	
 .portfolio_description
 	height: 100% 
@@ -210,6 +217,7 @@
 	+tablet
 		float: none
 		width: 100% 
+		height: 35% 
 	
 .project
 	display: inline-block
@@ -225,7 +233,7 @@
 	font-size: rem(35px) 
 	color: #373E42
 	position: relative
-	padding: 0 20% 
+	padding: 0 100px
 	&:before,
 	&:after
 		content: ""
@@ -238,14 +246,20 @@
 		position: absolute
 		top: 18px
 	&:after
-		right: 10%
+		right: 19%
 	&:before
-		left: 10%
+		left: 19%
+	+laptop
+		padding: 0
+		&:after
+			right: 0
+		&:before
+			left: 0
 
 .project_skills
 	font-family: "roboto_medium"
 	padding: 15px 0
-	margin: 40px 0
+	margin: 27px 0 38px
 	color: #00BFA5
 	border-top: 1px solid #00BFA5
 	border-bottom: 1px solid #00BFA5
@@ -278,6 +292,8 @@
 	+tablet
 		float: none
 		width: 100%
+		position: relative
+		height: 45% 
 
 .portfolio_controls
 	height: 30%
@@ -293,6 +309,8 @@
 	+tablet
 		float: none
 		width: 100%
+		height: 20% 
+
 .controls_prev
 	position: relative
 	float: left 
@@ -308,6 +326,8 @@
 		vertical-align: middle
 		height: 100%
 		width: 0
+	+tablet
+		
 
 .controls_next
 	position: relative
@@ -323,6 +343,8 @@
 		vertical-align: middle
 		height: 100%
 		width: 0  
+	+tablet
+		
 
 .portf_arrow
 	position: absolute
@@ -365,9 +387,9 @@
 /* 			Talks about me: 		*/
 /* =================================*/
 	 	
-.talks, .blur
+.talks
 	width: 100%
-	height: 1290px  
+	min-height: 1290px  
 	background: url("../img/bg_about.jpg")
 
 .talks_title
@@ -376,6 +398,10 @@
 	text-align: center
 	height: 185px 
 	line-height: 185px; 
+	+tablet
+		font-size: 49px 
+	+phone
+		height: 136px 
 
 .about_title_txt
 	position: relative
@@ -430,7 +456,7 @@
 		height: 100px 
 	
 .reviews
-	width: 60% 
+	width: 51% 
 	margin: auto 
 	display: flex 
 	&:before,
@@ -449,6 +475,7 @@
 	+phone
 		display: block
 		margin: 0  
+		text-align: left
 		
 .review_left
 	float: left 
@@ -464,8 +491,13 @@
 	
 .review
 	width: 50% 
-	margin: 60px auto 0
-	padding: 0 10px  
+	margin: 54px auto 0
+	padding: 0 10px 
+	+desktop
+		 margin: 60px auto 0
+	+tablet
+		margin: -34px auto 0
+		padding: 0 
 	+phone
 		width: 100%
 		margin: 0 
@@ -473,6 +505,7 @@
 .review_txt
 	font-family: "roboto_regular"
 	color: #455A64
+	line-height: 1.5 
 	&:before
 		content: "\f10d"
 		font-family: "FontAwesome"
@@ -480,16 +513,25 @@
 		position: relative
 		display: block
 		opacity: .2
-		margin-bottom: 30px
+		margin-bottom: 11px
+	+tablet
+		&:before
+			margin-bottom: 5px
+	+phone
+		text-align: left
+		&:before
+			text-align: center
 
 .review_author
-	margin-top: 40px 
+	margin-top: 22px 
 	&:before,
 	&:after
 		content: " "
 		display: block
 	&:after
 		clear: both
+	+phone
+		margin-top: 10px 
 
 .avatar
 	width: 80px
@@ -498,45 +540,53 @@
 	border-radius: 50%
 	overflow: hidden  
 	margin-right: 20px
+	+tablet
+		width: 77px
+		height: 77px 
+	+phone
+		width: 50px
+		height: 50px 
 	
 .author
 	color: #00bfa5
 	padding: 6% 0 
+	+tablet
+		padding: 5% 0
+	+phone
+		padding: 2% 0
 	
 
 .feedback_form
-	min-height: 440px
 	width: 380px 
-	margin: 70px auto 0
+	margin: 60px auto 0
 	position: relative
 	top: 0
 	border-radius: 5px
 	overflow: hidden
+	+desktop
+		margin: 69px auto 0
+	+tablet
+		width: 350px 
+		margin: 50px auto 0
+	+phone
+		margin: 29px auto 0
 	
 .blur
-	position: absolute
-	bottom: 0
-	height: 100% 
-	z-index: 0
-	background-position: center calc(100% + 450px + 200px)
-	-webkit-filter: blur(3px)
-	filter: blur(3px)
-	&:after 
-		content: ''
-		height: 100%
-		width: 100%
-		background: rgba(255,255,255,.3)
-		position: absolute
-
-		
+	height: 100%
+	width: 100%
+	background: #ccc
+	opacity: .4
+	position: absolute   
+	
 .feedback_wrapper
 	padding: 0 20px 
 	position: relative
 	z-index: 1 
 
 .feedback_title
-	margin: 40px 0 
+	margin: 29px 0 30px
 	font-size: 35px
+	position: relative
 	&:before,
 	&:after
 		content: ""
@@ -547,21 +597,29 @@
 		background-color: #373E42
 		opacity: .4
 		position: absolute
-		top: 20px
+		top: 50%
 	&:after
 		right: 20px
 	&:before
 		left: 20px
+	+tablet
+		margin: 32px 0 10px 
+		font-size: 30px 
+	+phone
+		font-size: 21px 
+		margin: 32px 0 24px 
 
 .feedback_field
 	border-radius: 5px
 	display: block
-	margin: 20px auto
+	margin: 19px auto
 	padding: 15px
 	border: 0
 	width: 100% 
 	box-sizing: border-box
 	font: inherit
+	+tablet
+		margin: 14px auto 17px
 	
 .feedback_textarea
 	height: 140px 
@@ -593,6 +651,20 @@
 		border-left: 1px solid rgba(222, 227, 231, .5)
 	&:hover
 		opacity: .3
+.up
+	padding-bottom: 207px 
+	padding-top: 65px
+	text-align: center 
+	+tablet
+		padding-bottom: 274px 
+		padding-top: 95px
+	+phone
+		padding-bottom: 259px 
+		padding-top: 47px
+
+.up_icon
+	width: 25px
+	height: 25px  
 
 /* =================================*/
 /* 				Footer: 			*/
@@ -604,13 +676,13 @@
 	position: absolute
 	width: 100% 
 	+tablet
-		height: auto 
+		height: 230px
 	+phone
-		font-size: 13px 
+		font-size: 12px 
 	
 	
 .footer_menu
-	padding: 20px
+	padding: 19px
 	border-bottom: 1px solid rgba(255,255,255,.1) 
 	&:before,
 	&:after

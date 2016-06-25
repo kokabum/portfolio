@@ -7,6 +7,7 @@ var svgSprite = require('gulp-svg-sprite'),
 	svgmin = require('gulp-svgmin'),
 	cheerio = require('gulp-cheerio'),
 	replace = require('gulp-replace');
+var autoprefixer = require('gulp-autoprefixer');
 
 
 // gulp-concat-css
@@ -46,6 +47,15 @@ gulp.task('sass:watch', function () {
   gulp.watch('source/sass/**/*.sass', ['sass']);
 });
 
+//  gulp-autoprefixer
+gulp.task('autoprefixer', function () {
+  return gulp.src('src/app.css')
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
+    .pipe(gulp.dest('dist'));
+});
 
 // gulp-svg-sprite
 gulp.task('svgSpriteBuild', function() {
