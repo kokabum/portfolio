@@ -8,20 +8,23 @@ var svgSprite = require('gulp-svg-sprite'),
 	cheerio = require('gulp-cheerio'),
 	replace = require('gulp-replace');
 var autoprefixer = require('gulp-autoprefixer');
+var browserSync = require('browser-sync').create();
+
+
+// watcher
+gulp.task('watch', function() {
+  gulp.watch('source/sass/app.sass', ['sass']);
+  gulp.watch('source/jade/*.jade', ['jade']);
+});
 
 
 // gulp-concat-css
-gulp.task('cssConcat', function() {
+gulp.task('concatCSS', function() {
   gulp.src('app/css/**/*.css')
   	.pipe(concat('main.css'))
   	.pipe(gulp.dest('app/'));
 });
 
-gulp.task('watch', function() {
-	gulp.watch('css/*.css', ['cssConcat'])
-  gulp.watch('source/sass/app.sass', ['sass']);
-  gulp.watch('source/jade/*.jade', ['jade']);
-});
 
 // gulp-jade
 gulp.task('jade', function() {
@@ -35,17 +38,17 @@ gulp.task('jade', function() {
     .pipe(gulp.dest('app/'))
 });
 
+
 // gulp-sass
 gulp.task('sass', function () {
   return gulp.src('source/sass/app.sass')
-  	.pipe(sassGlob())
-    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
-    .pipe(gulp.dest('app/css'));
+    //.pipe(sassGlob())
+    //.pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+    .pipe(sass())
+    .pipe(gulp.dest('app/css'))
+    .pipe(browserSync.stream());
 });
- 
-gulp.task('sass:watch', function () {
-  gulp.watch('source/sass/**/*.sass', ['sass']);
-});
+
 
 //  gulp-autoprefixer
 gulp.task('autoprefixer', function () {
@@ -56,6 +59,7 @@ gulp.task('autoprefixer', function () {
     }))
     .pipe(gulp.dest('dist'));
 });
+
 
 // gulp-svg-sprite
 gulp.task('svgSpriteBuild', function() {
@@ -78,6 +82,19 @@ gulp.task('svgSpriteBuild', function() {
       .pipe(gulp.dest('./'));
   });
 
+
+// browser-sync
+gulp.task('serve', ['sass'], function() {
+
+    browserSync.init({
+        server: "./app"
+    });
+
+    gulp.watch('source/sass/app.sass', ['sass']);
+    gulp.watch("app/*.html").on('change', browserSync.reload);
+});
+
+gulp.task('default', ['serve']);
 
 /*gulp.task('svgSpriteBuild', function () {
   return gulp.src('./source/icons/*.svg')
