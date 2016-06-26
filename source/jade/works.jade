@@ -1,133 +1,99 @@
 doctype html
 html
-	head
-		meta(charset="UTF-8")
-		meta(name="viewport" content="width=device-width, initial-scale=1")
-		link(rel="icon" type="image/png" href="img/mount.png")
-		link(rel="shortcut icon" type="image/png" href="img/mount.png")
-		link(rel="stylesheet" href="css/app.css")
-		script(src="js/main.js" defer="")
-		//script(src="https://code.jquery.com/jquery-2.2.0.min.js" defer="")
-		title Dzianis Dzetko
-body
-	.wrapper_works
-		header.header
-			.nav_wrapper
-				.nav_social
-					ul.nav_list
-						li.nav_item
-							a.nav_link(href="#")
-								svg.works_icon
-									use(xlink:href="img/svg-sprite.svg#vk")
-						li.nav_item
-							a.nav_link(href="#")
-								svg.works_icon
-									use(xlink:href="img/svg-sprite.svg#github")
-						li.nav_item
-							a.nav_link(href="#")
-								svg.works_icon
-									use(xlink:href="img/svg-sprite.svg#in")
-				.nav_menu
-					svg.menu_svg(version="1.1" id="menu_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40 35" enable-background="new 0 0 40 35" xml:space="preserve")
-						path(d="M40,2.5C40,3.881,38.881,5,37.5,5h-35C1.119,5,0,3.881,0,2.5l0,0C0,1.119,1.119,0,2.5,0h35C38.881,0,40,1.119,40,2.5L40,2.5z")
-						path(d="M40,17.5c0,1.381-1.119,2.5-2.5,2.5h-35C1.119,20,0,18.881,0,17.5l0,0C0,16.119,1.119,15,2.5,15h35C38.881,15,40,16.119,40,17.5L40,17.5z")
-						path(d="M40,32.5c0,1.381-1.119,2.5-2.5,2.5h-35C1.119,35,0,33.881,0,32.5l0,0C0,31.119,1.119,30,2.5,30h35C38.881,30,40,31.119,40,32.5L40,32.5z")
-			.info-box_user
-				.info-box_img
-					img(src="img/foto.jpg" class="user_foto")
-				.info-box_name Денис Детко
-				.info-box_desc Личный сайт веб разработчика
-			svg.header_svg
-				use(xlink:href="img/svg-sprite.svg#portfolio_header")
-			svg.icon_arrow
-				use(xlink:href="img/svg-sprite.svg#arrow_down")
-			svg.icon_bg(preserveAspectRatio="none" viewBox="0 0 2032 360.368")
-				use(xlink:href="img/svg-sprite.svg#bg")
-		.box-title_works
-			.works_title
-				h1.works_txt Мои Работы
-				svg.works_svg
-					use(xlink:href="img/svg-sprite.svg#works_header")
+	include common/_head
+	body
+		.wrapper_works
+			header.header
+				.nav_wrapper
+					.nav_social
+						ul.nav_list
+							li.nav_item
+								a.nav_link(href="#")
+									svg.works_icon
+										use(xlink:href="img/svg-sprite.svg#vk")
+							li.nav_item
+								a.nav_link(href="#")
+									svg.works_icon
+										use(xlink:href="img/svg-sprite.svg#github")
+							li.nav_item
+								a.nav_link(href="#")
+									svg.works_icon
+										use(xlink:href="img/svg-sprite.svg#in")
+					.nav_menu
+						svg.menu_svg(version="1.1" id="menu_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40 35" enable-background="new 0 0 40 35" xml:space="preserve")
+							path(d="M40,2.5C40,3.881,38.881,5,37.5,5h-35C1.119,5,0,3.881,0,2.5l0,0C0,1.119,1.119,0,2.5,0h35C38.881,0,40,1.119,40,2.5L40,2.5z")
+							path(d="M40,17.5c0,1.381-1.119,2.5-2.5,2.5h-35C1.119,20,0,18.881,0,17.5l0,0C0,16.119,1.119,15,2.5,15h35C38.881,15,40,16.119,40,17.5L40,17.5z")
+							path(d="M40,32.5c0,1.381-1.119,2.5-2.5,2.5h-35C1.119,35,0,33.881,0,32.5l0,0C0,31.119,1.119,30,2.5,30h35C38.881,30,40,31.119,40,32.5L40,32.5z")
+				.info-box_user
+					.info-box_img
+						img(src="img/foto.jpg" class="user_foto")
+					h1.info-box_name Денис Детко
+					.info-box_desc Личный сайт веб разработчика
+				svg.header_svg
+					use(xlink:href="img/svg-sprite.svg#portfolio_header")
+				svg.icon_arrow
+					use(xlink:href="img/svg-sprite.svg#arrow_down")
+				svg.icon_bg(preserveAspectRatio="none" viewBox="0 0 2032 360.368")
+					use(xlink:href="img/svg-sprite.svg#bg")
+			.box-title_works
+				.works_title
+					h2.works_txt Мои Работы
+					svg.works_svg
+						use(xlink:href="img/svg-sprite.svg#works_header")
 
 
-		section.portfolio
-			.portfolio_slider
-				img.works_img(src="img/works/work1.png")
-			.portfolio_description
-				.project
-					.project_name Сайт школы онлайн образования
-					.project_skills HTML, CSS, JAVASCRIPT
-					a.project_link(href="#") Посмотреть сайт
-			.portfolio_controls
-				.controls_prev
-					svg.portf_arrow.arrow_down
-						use(xlink:href="img/svg-sprite.svg#portf_arrow_down")
-					.works_controls
-						img.works_img(src="img/works/work2.jpg")
-				.controls_next
-					svg.portf_arrow.arrow_up
+			section.portfolio
+				.portfolio_slider
+					img.works_img(src="img/works/work1.png")
+				.portfolio_description
+					.project
+						.project_name Сайт школы онлайн образования
+						.project_skills HTML, CSS, JAVASCRIPT
+						a.project_link(href="#") Посмотреть сайт
+				.portfolio_controls
+					.controls_prev
+						svg.portf_arrow.arrow_down
+							use(xlink:href="img/svg-sprite.svg#portf_arrow_down")
+						.works_controls
+							img.works_img(src="img/works/work2.jpg")
+					.controls_next
+						svg.portf_arrow.arrow_up
+							use(xlink:href="img/svg-sprite.svg#portf_arrow_up")
+						.works_controls
+							img.works_img(src="img/works/work3.jpg")
+			section.talks
+				.talks_title
+					h2.about_title_txt Что обо мне говорят
+					svg.about_title_img
+						use(xlink:href="img/svg-sprite.svg#about_header")
+				.reviews
+					blockquote.review.review_left
+						.review_txt Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+						.review_author
+							.avatar
+								img.avatar_img(src="img/dima.png")
+							.author
+								p Ковальчук Дмитрий
+								p основатель LoftSchool
+					blockquote.review.review_right
+						.review_txt Этот код выдержет любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах!
+						.review_author
+							.avatar
+								img.avatar_img(src="img/zar.png")
+							.author
+								p Зар Захаров
+								p главный преподаватель
+				form.feedback_form
+					.blur
+					.feedback_wrapper
+						h2.feedback_title Связаться со мной
+						input.feedback_field(type="text" name="name" placeholder="Имя")
+						input.feedback_field(type="text" name="email" placeholder="Email")
+						textarea.feedback_field.feedback_textarea(name="message" placeholder="Ваше сообщение")
+					.feedback_buttons
+						input.button(type="submit" value="Отправить")
+						input.button(type="reset" value="Очистить")
+				.up
+					svg.up_icon
 						use(xlink:href="img/svg-sprite.svg#portf_arrow_up")
-					.works_controls
-						img.works_img(src="img/works/work3.jpg")
-		section.talks
-			.talks_title
-				h1.about_title_txt Что обо мне говорят
-				svg.about_title_img
-					use(xlink:href="img/svg-sprite.svg#about_header")
-			.reviews
-				blockquote.review.review_left
-					.review_txt Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-					.review_author
-						.avatar
-							img.avatar_img(src="img/dima.png")
-						.author
-							p Ковальчук Дмитрий
-							p основатель LoftSchool
-				blockquote.review.review_right
-					.review_txt Этот код выдержет любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах!
-					.review_author
-						.avatar
-							img.avatar_img(src="img/zar.png")
-						.author
-							p Зар Захаров
-							p главный преподаватель
-			form.feedback_form
-				.blur
-				.feedback_wrapper
-					h2.feedback_title Связаться со мной
-					input.feedback_field(type="text" name="name" placeholder="Имя")
-					input.feedback_field(type="text" name="email" placeholder="Email")
-					textarea.feedback_field.feedback_textarea(name="message" placeholder="Ваше сообщение")
-				.feedback_buttons
-					input.button(type="submit" value="Отправить")
-					input.button(type="reset" value="Очистить")
-			.up
-				svg.up_icon
-					use(xlink:href="img/svg-sprite.svg#portf_arrow_up")
-	footer.footer
-		.footer_menu
-			ul.footer_list
-				li.footer_item
-					a.footer_link(href="works.html") Мои работы
-				li.footer_item
-					a.footer_link(href="about.html") Обо мне
-				li.footer_item
-					a.footer_link(href="blog.html") Блог
-				li.footer_item
-					a.footer_link(href="index.html") Авторизация
-			ul.footer_social-list
-				li.footer_social-item
-					a.footer_social-links(href="#")
-						svg.footer_svg
-							use(xlink:href="img/svg-sprite.svg#vk_round")
-				li.footer_social-item
-					a.footer_social-links(href="#")
-						svg.footer_svg
-							use(xlink:href="img/svg-sprite.svg#github_round")
-				li.footer_social-item
-					a.footer_social-links(href="#")
-						svg.footer_svg
-							use(xlink:href="img/svg-sprite.svg#in_round")
-		.footer_copyright
-			.footer_info Я веб-разработчик из Минска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
-			.footer_about © Денис Детко | создано с любовью в LoftSchool | 2016
+		include common/_footer

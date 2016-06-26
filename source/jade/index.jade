@@ -1,48 +1,42 @@
 doctype html
 html
-	head
-		meta(charset="UTF-8")
-		meta(name="viewport" content="width=device-width, initial-scale=1")
-		link(rel="icon" type="image/png" href="img/mount.png")
-		link(rel="shortcut icon" type="image/png" href="img/mount.png")
-		link(rel="stylesheet" href="css/app.css")
-		title Dzianis Dzetko
-body.animate
-	.wrapper
-		header.header_welcome
-			a(href="#" class="auth") Авторизоваться
-		.main
-			.welcome
-				.flip-card
-					.flip-card_front
-						.user_img
-							img(src="img/foto.jpg" class="user_foto")
-						.user_name Денис Детко
-						.user_desc Личный сайт веб разработчика
-						.user_social
-							ul.social_list
-								li.social_item
-									a.social_link(href="#")
-										svg.icon.icon_vk(width="25" heith="25")
-											use(xlink:href="img/svg-sprite.svg#vk")
-								li.social_item
-									a.social_link(href="#")
-										svg.icon.icon_git(width="25" heith="25")
-											use(xlink:href="img/svg-sprite.svg#github")
-								li.social_item
-									a.social_link(href="#")
-										svg.icon.icon_in(width="25" heith="25")
-											use(xlink:href="img/svg-sprite.svg#in")
-						ul.menu_list
-							li.list_item
-								a.item_link(href="works.html") Мои работы
-							li.list_item
-								a.item_link(href="about.html") Обо мне
-							li.list_item
-								a.item_link(href="blog.html") Блог
-					.flip-card_back
-		footer(class="footer_welcome")
-			.footer_text
-				span.copyright © Денис Детко
-				span.copyright.copyright_slogan создано с любовью в LoftScool
-				span.copyright 2016
+	include common/_head
+	body.animate
+		.wrapper
+			header.header_welcome
+				a(href="#" class="auth") Авторизоваться
+			.main
+				.welcome
+					.flip-card
+						.flip-card_front
+							.user_img
+								img(src="img/foto.jpg" class="user_foto")
+							h1.user_name Денис Детко
+							.user_desc Личный сайт веб разработчика
+							.user_social
+								ul.social_list
+									li.social_item
+										a.social_link(href="#")
+											svg.icon.icon_vk(width="25" heith="25")
+												use(xlink:href="img/svg-sprite.svg#vk")
+									li.social_item
+										a.social_link(href="#")
+											svg.icon.icon_git(width="25" heith="25")
+												use(xlink:href="img/svg-sprite.svg#github")
+									li.social_item
+										a.social_link(href="#")
+											svg.icon.icon_in(width="25" heith="25")
+												use(xlink:href="img/svg-sprite.svg#in")
+							ul.menu_list
+								li.list_item
+									a.item_link(href="works.html") Мои работы
+								li.list_item
+									a.item_link(href="about.html") Обо мне
+								li.list_item
+									a.item_link(href="blog.html") Блог
+						.flip-card_back
+			footer(class="footer_welcome")
+				.footer_text
+					span.copyright © Денис Детко
+					span.copyright.copyright_slogan создано с любовью в LoftScool
+					span.copyright 2016
