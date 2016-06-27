@@ -132,6 +132,11 @@
 			right: 0
 		&:before
 			left: 0
+	+laptop
+		&:after
+			right: -15px
+		&:before
+			left: -15px
 	+tablet
 		font-size: 30px
 	+phone
@@ -140,6 +145,7 @@
 .biography_text
 	margin-bottom: 11px
 	color: #455A64
+	line-height: 1.5 
 	+tablet
 		font-size: 14px 
 
@@ -187,8 +193,15 @@
 		padding-top: 40px
 		padding-bottom: 40px 
 		font-size: 30px 
+		width: 35% 
+		&:after
+			right: -35px
+			top: 50%
+		&:before
+			left: -35px
+			top: 50%
 	+phone
-		width: 72%
+		width: 43%
 		font-size: 21px
 		
 .skills_text

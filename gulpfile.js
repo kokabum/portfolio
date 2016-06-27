@@ -11,6 +11,13 @@ var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
 
 
+// default
+  gulp.task('default', function() {
+    'jade',
+    'sass',
+    'serve'
+    });
+
 // watcher
 gulp.task('watch', function() {
   gulp.watch('source/sass/app.sass', ['sass']);
@@ -42,8 +49,6 @@ gulp.task('jade', function() {
 // gulp-sass
 gulp.task('sass', function () {
   return gulp.src('source/sass/app.sass')
-    //.pipe(sassGlob())
-    //.pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
     .pipe(sass())
     .pipe(gulp.dest('app/css'))
     .pipe(browserSync.stream());
@@ -93,8 +98,6 @@ gulp.task('serve', ['sass'], function() {
     gulp.watch('source/sass/app.sass', ['sass']);
     gulp.watch("app/*.html").on('change', browserSync.reload);
 });
-
-gulp.task('default', ['serve']);
 
 /*gulp.task('svgSpriteBuild', function () {
   return gulp.src('./source/icons/*.svg')

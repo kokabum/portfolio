@@ -80,7 +80,8 @@
 
 .info-box_name
 	font-size: 35px
-	margin-top: 15px
+	margin-top: 14px
+	margin-bottom: 0 
 	color: #fff
 	font-family: "roboto_medium" 
 
@@ -249,12 +250,29 @@
 		right: 19%
 	&:before
 		left: 19%
+	+desktop
+		padding: 0
+		&:after
+			right: 8%
+		&:before
+			left: 8%
 	+laptop
 		padding: 0
 		&:after
 			right: 0
 		&:before
 			left: 0
+	+tablet
+		font-size: 21px
+		&:after
+			right: 13%
+		&:before
+			left: 13%
+	+phone
+		&:after
+			right: -5%
+		&:before
+			left: -5%
 
 .project_skills
 	font-family: "roboto_medium"
@@ -263,6 +281,8 @@
 	color: #00BFA5
 	border-top: 1px solid #00BFA5
 	border-bottom: 1px solid #00BFA5
+	+tablet
+		font-size: 14px
 
 .project_link
 	display: inline-block
@@ -281,6 +301,8 @@
 		font-family: "FontAwesome";
 		font-size: 1.25em;
 		margin-right: 8px;
+	+tablet
+		font-size: 14px
 
 .portfolio_slider
 	height: 70%
@@ -474,7 +496,7 @@
 		width: 95% 
 	+phone
 		display: block
-		margin: 0  
+		margin: 0 10px 
 		text-align: left
 		
 .review_left
@@ -494,7 +516,7 @@
 	margin: 54px auto 0
 	padding: 0 10px 
 	+desktop
-		 margin: 60px auto 0
+		 margin: 51px auto 0
 	+tablet
 		margin: -34px auto 0
 		padding: 0 
@@ -549,7 +571,7 @@
 	
 .author
 	color: #00bfa5
-	padding: 6% 0 
+	padding: 5% 0 
 	+tablet
 		padding: 5% 0
 	+phone
@@ -602,6 +624,13 @@
 		right: 20px
 	&:before
 		left: 20px
+	+desktop
+		&:after
+			right: 6px
+			top: 40%
+		&:before
+			left: 6px
+			top: 40%
 	+tablet
 		margin: 32px 0 10px 
 		font-size: 30px 
@@ -612,7 +641,7 @@
 .feedback_field
 	border-radius: 5px
 	display: block
-	margin: 19px auto
+	margin: 18px auto
 	padding: 15px
 	border: 0
 	width: 100% 
@@ -650,7 +679,7 @@
 	&:last-child
 		border-left: 1px solid rgba(222, 227, 231, .5)
 	&:hover
-		opacity: .3
+		background: #009b86
 .up
 	padding-bottom: 207px 
 	padding-top: 65px
