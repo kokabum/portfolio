@@ -16,11 +16,11 @@ html
 							.user_social
 								ul.social_list
 									li.social_item
-										a.social_link(href="#")
+										a.social_link(href="https://vk.com/kokabum")
 											svg.icon.icon_vk(width="25" heith="25")
 												use(xlink:href="img/svg-sprite.svg#vk")
 									li.social_item
-										a.social_link(href="#")
+										a.social_link(href="https://github.com/kokabum")
 											svg.icon.icon_git(width="25" heith="25")
 												use(xlink:href="img/svg-sprite.svg#github")
 									li.social_item
@@ -28,12 +28,11 @@ html
 											svg.icon.icon_in(width="25" heith="25")
 												use(xlink:href="img/svg-sprite.svg#in")
 							ul.menu_list
-								li.list_item
-									a.item_link(href="works.html") Мои работы
-								li.list_item
-									a.item_link(href="about.html") Обо мне
-								li.list_item
-									a.item_link(href="blog.html") Блог
+								- var pages = {"Мои работы" : "works.html", "Обо мне" : "about.html", "Блог" : "blog.html"}
+								each p_url, p_name in pages
+									li.list_item
+										a.item_link(href=p_url)= p_name
+								
 						.flip-card_back
 			footer(class="footer_welcome")
 				.footer_text
