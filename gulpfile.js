@@ -9,12 +9,16 @@ var svgSprite = require('gulp-svg-sprite'),
 	replace = require('gulp-replace');
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
+var cssmin = require('gulp-cssmin');
+var rename = require('gulp-rename');
+
 
 
 // default
   gulp.task('default', function() {
     'jade',
     'sass',
+    'minify',
     'serve'
     });
 
@@ -40,7 +44,7 @@ gulp.task('jade', function() {
   gulp.src('source/jade/*.jade')
     .pipe(jade({
       locals: YOUR_LOCALS,
-      pretty: '\t',
+      //pretty: '\t',
     }))
     .pipe(gulp.dest('app/'))
 });
@@ -52,6 +56,13 @@ gulp.task('sass', function () {
     .pipe(sass())
     .pipe(gulp.dest('app/css'))
     .pipe(browserSync.stream());
+});
+
+// minify
+gulp.task('minify', function () {
+  gulp.src('app/css/app.css')
+    .pipe(cssmin())
+    .pipe(gulp.dest('app/css/'));
 });
 
 
