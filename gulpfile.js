@@ -19,7 +19,9 @@ var rename = require('gulp-rename');
     'jade',
     'sass',
     'minify',
-    'serve'
+    'copy'
+    'serve',
+    'watch'
     });
 
 // watcher
@@ -63,6 +65,16 @@ gulp.task('minify', function () {
   gulp.src('app/css/app.css')
     .pipe(cssmin())
     .pipe(gulp.dest('app/css/'));
+});
+
+// copy
+gulp.task('copy', function() {
+  gulp.src('source/img/**/')
+    .pipe(gulp.dest('app/img/'));
+  gulp.src('source/fonts/**/*')
+    .pipe(gulp.dest('app/fonts/'));
+  gulp.src('source/js/*')
+    .pipe(gulp.dest('app/js/'));
 });
 
 

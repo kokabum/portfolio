@@ -4,7 +4,7 @@ html
 	body.animate
 		.wrapper
 			header.header_welcome
-				a(href="#" class="auth") Авторизоваться
+				a(href="#" class="authorization") Авторизоваться
 			.main
 				.welcome
 					.flip-card
@@ -15,18 +15,12 @@ html
 							.user_desc Личный сайт веб разработчика
 							.user_social
 								ul.social_list
-									li.social_item
-										a.social_link(href="https://vk.com/kokabum")
-											svg.icon.icon_vk(width="25" heith="25")
-												use(xlink:href="img/svg-sprite.svg#vk")
-									li.social_item
-										a.social_link(href="https://github.com/kokabum")
-											svg.icon.icon_git(width="25" heith="25")
-												use(xlink:href="img/svg-sprite.svg#github")
-									li.social_item
-										a.social_link(href="#")
-											svg.icon.icon_in(width="25" heith="25")
-												use(xlink:href="img/svg-sprite.svg#in")
+									- var socials_welcome = {"img/svg-sprite.svg#vk" : "https://vk.com/kokabum", "img/svg-sprite.svg#github" : "https://github.com/kokabum", "img/svg-sprite.svg#in" : "#"}
+									each s_url, s_svg in socials_welcome
+										li.social_item
+											a.social_link(href=s_url)
+												svg.icon.icon_vk(width="25" heith="25")
+													use(xlink:href=s_svg)
 							ul.menu_list
 								- var pages = {"Мои работы" : "works.html", "Обо мне" : "about.html", "Блог" : "blog.html"}
 								each p_url, p_name in pages

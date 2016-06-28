@@ -234,7 +234,9 @@
 	font-size: rem(35px) 
 	color: #373E42
 	position: relative
-	padding: 0 100px
+	padding: 0 12%
+	width: 306px
+	margin: 0 auto  
 	&:before,
 	&:after
 		content: ""
@@ -247,34 +249,35 @@
 		position: absolute
 		top: 18px
 	&:after
-		right: 19%
+		right: 10%
 	&:before
-		left: 19%
+		left: 10%
 	+desktop
 		padding: 0
-		&:after
-			right: 8%
-		&:before
-			left: 8%
-	+laptop
-		padding: 0
-		&:after
-			right: 0
-		&:before
-			left: 0
-	+tablet
-		font-size: 21px
-		&:after
-			top: 50%
-			right: 13%
-		&:before
-			top: 50%
-			left: 13%
-	+phone
 		&:after
 			right: -5%
 		&:before
 			left: -5%
+	+laptop
+		padding: 0
+		width: 263px 
+		&:after
+			right: -35px
+		&:before
+			left: -35px
+	+tablet
+		font-size: 21px
+		&:after
+			top: 38%
+			right: -15%
+		&:before
+			top: 38%
+			left: -15%
+	+phone
+		&:after
+			right: -10%
+		&:before
+			left: -10%
 
 .project_skills
 	font-family: "roboto_medium"
@@ -455,13 +458,16 @@
 		left: 2%
 	+tablet
 		font-size: 49px
-		width: 65%
-		&:before,
+		width: 400px
+		&:before
+			top: 50%
+			left: -5%
 		&:after
 			top: 50%
+			right: -5%
 	+phone
 		font-size: 35px 
-		width: 56% 
+		width: 200px 
 
 .about_title_img
 	z-index: 1
@@ -726,7 +732,6 @@
 .footer_list
 	padding: 0
 	margin: 0  
-	width: 50%
 	float: left   
 	height: 35px 
 	line-height: 35px 
@@ -741,12 +746,14 @@
 	padding-right: 35px 
 
 .footer_link
+	opacity: .7
+	&:hover
+		opacity: 1 
 
 .footer_social-list
-	width: 50%;
-	padding: 0;
-	float: right;
-	margin: 0;
+	padding: 0
+	float: right
+	margin: 0
 	text-align: right 
 	height: 35px 
 	+tablet
