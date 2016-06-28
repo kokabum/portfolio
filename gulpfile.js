@@ -19,7 +19,7 @@ var rename = require('gulp-rename');
     'jade',
     'sass',
     'minify',
-    'copy'
+    'copy',
     'serve',
     'watch'
     });
