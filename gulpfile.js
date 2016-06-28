@@ -15,13 +15,12 @@ var rename = require('gulp-rename');
 
 
 // default
-gulp.task('default',['jade', 'sass', 'minify', 'copy', 'watch', 'server'], function() {
-    
-  });
+gulp.task('default',['jade', 'sass', 'minify', 'copy', 'watch', 'server']);
+
 
 // watcher
 gulp.task('watch', function() {
-  gulp.watch('source/sass/app.sass', ['sass']);
+  gulp.watch('source/sass/app.sass', ['sass']),
   gulp.watch('source/jade/*.jade', ['jade']);
 });
 
@@ -107,7 +106,7 @@ gulp.task('svgSpriteBuild', function() {
 
 
 // browser-sync
-gulp.task('server', ['sass'], function() {
+gulp.task('server', function() {
 
     browserSync.init({
         server: "./app"
