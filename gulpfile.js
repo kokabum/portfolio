@@ -15,14 +15,9 @@ var rename = require('gulp-rename');
 
 
 // default
-  gulp.task('default', function() {
-    'jade',
-    'sass',
-    'minify',
-    'copy',
-    'serve',
-    'watch'
-    });
+gulp.task('default',['jade', 'sass', 'minify', 'copy', 'watch', 'server'], function() {
+    
+  });
 
 // watcher
 gulp.task('watch', function() {
@@ -112,13 +107,13 @@ gulp.task('svgSpriteBuild', function() {
 
 
 // browser-sync
-gulp.task('serve', ['sass'], function() {
+gulp.task('server', ['sass'], function() {
 
     browserSync.init({
         server: "./app"
     });
 
-    gulp.watch('source/sass/app.sass', ['sass']);
+    gulp.watch("app/css/*.css").on('change', browserSync.reload);
     gulp.watch("app/*.html").on('change', browserSync.reload);
 });
 
