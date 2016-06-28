@@ -106,14 +106,15 @@ gulp.task('svgSpriteBuild', function() {
 
 
 // browser-sync
-gulp.task('server', ['sass'], function() {
+gulp.task('server', function() {
 
     browserSync.init({
         server: "./app"
     });
 
-    gulp.watch("app/css/*.sass", ['sass']).on('change', browserSync.reload);
+    
     gulp.watch("app/*.html").on('change', browserSync.reload);
+    gulp.watch("app/css/*.css").on('change', browserSync.reload);
 });
 
 /*gulp.task('svgSpriteBuild', function () {
