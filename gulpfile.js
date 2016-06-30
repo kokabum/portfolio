@@ -48,7 +48,7 @@ gulp.task('jade', function() {
 
 // gulp-sass
 gulp.task('sass', function () {
-  return gulp.src('source/sass/*/**.sass')
+  return gulp.src('source/sass/**/*.sass')
     .pipe(sass())
     .pipe(gulp.dest('app/css'))
     
@@ -114,7 +114,7 @@ gulp.task('server', function() {
 
     
     gulp.watch("app/*.html").on('change', browserSync.reload);
-    gulp.watch("app/css/*.css").on('change', browserSync.reload);
+    gulp.watch("source/sass/app.sass").on('change', browserSync.reload);
 });
 
 /*gulp.task('svgSpriteBuild', function () {
