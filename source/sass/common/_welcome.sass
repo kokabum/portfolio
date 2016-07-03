@@ -3,12 +3,19 @@
 /* =================================*/
 /* 				Welcome: 			*/
 /* =================================*/
-.animate
-	background: url('../img/bg.jpg')
-	background-size: cover
-	overflow: hidden 
-	position: relative
-	min-height: 100% 
+.parallax
+	height: 100%
+	overflow: hidden
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	
+.layer
+	position: absolute
+	bottom: -50%
+	left: -15%
 
 .wrapper
 	width: 100%
@@ -28,7 +35,7 @@
 
 .authorization
 	font-size: 16px;
-	border: 5px solid #fff;
+	border: 1px solid #fff;
 	border-radius: 5px;
 	height: 45px;
 	width: 180px;

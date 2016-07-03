@@ -2,6 +2,11 @@ doctype html
 html
 	include common/_head
 	body.animate
+		.parallax
+			- var parallax = ["img/parallax/layer-0.png", "img/parallax/layer-1.png" ,"img/parallax/layer-2.png", "img/parallax/layer-3.png", "img/parallax/layer-4.png", "img/parallax/layer-5.png", "img/parallax/layer-6.png", "img/parallax/layer-7.png", "img/parallax/layer-8.png", "img/parallax/layer-9.png"]
+			each p_url in parallax
+				.layer
+					img(src=p_url)
 		.wrapper
 			header.header_welcome
 				a(href="#" class="authorization") Авторизоваться
