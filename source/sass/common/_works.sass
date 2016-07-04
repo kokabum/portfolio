@@ -19,7 +19,7 @@
 .nav_wrapper
 	padding: 30px 
 	position: relative
-	z-index: 1 
+	z-index: 6 
 	&:before,
 	&:after
 		content: " "
@@ -55,17 +55,51 @@
 .nav_menu
 	cursor: pointer
 	float: right
+	position: relative
+	z-index: 10  
 	
-.menu_svg
-	fill: #fff
-	opacity: .5
+.hamburg_menu
 	width: 40px
-	height: 35px
-	&:hover
+	height: 28px
+	position: relative
+	z-index: 10 
+	
+	&:hover > .hamb
 		opacity: 1
 	+phone
 		width: 30px
-		height: 22px  
+		height: 15px  
+		
+.clicked .hamb_top
+	transform: rotate(45deg)
+	top: 40%
+	opacity: 1
+
+.clicked .hamb_bottom
+	transform: rotate(-45deg)
+	top: 40%
+	opacity: 1
+		
+.clicked .hamb_middle
+	display: none
+	
+.hamb
+	transition: all .3s 
+	width: 40px
+	height: 5px
+	background-color: #fff
+	opacity: .5
+	position: absolute
+	border-radius: 5px
+		
+.hamb_top
+	top: 0
+
+.hamb_bottom
+	top: 100%
+
+.hamb_middle
+	top: 50%
 
 .info-box_user
 	width: 100%
@@ -702,6 +736,7 @@
 .up_icon
 	width: 25px
 	height: 25px  
+	cursor: pointer
 
 /* =================================*/
 /* 				Footer: 			*/
