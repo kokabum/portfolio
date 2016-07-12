@@ -1,5 +1,81 @@
 @import '_mixins.sass'
 
+/*				Preloader: 			*/
+
+.preloader
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	background: url('../img/preloader_bg.jpg') 
+	-webkit-background-size: cover 
+	background-size: cover 
+	z-index: 100 
+
+.loader_round
+	border: 3px solid transparent
+	border-top-color: #fff
+	border-radius: 50% 
+	&:before,
+	&:after
+		content: " "
+		position: absolute
+		border: 3px solid transparent
+		-webkit-border-radius: 50% 
+		border-radius: 50% 
+	&:before
+		top: 10px
+		bottom: 10px
+		left: 10px
+		right: 10px
+		border-top-color: #fff
+		-webkit-animation: load 2s infinite linear 
+		animation: load 2s infinite linear 
+	&:after
+		top: 23px
+		bottom: 23px
+		left: 23px
+		right: 23px
+		border-top-color: #fff
+		-webkit-animation: load 3s infinite linear 
+		animation: load 3s infinite linear 
+
+.loader_round
+	width: 150px
+	height: 150px
+	position: absolute
+	top: 50%
+	left: 50%
+	margin-top: -75px
+	margin-left: -75px
+	-webkit-animation: load 1s infinite linear 
+	animation: load 1s infinite linear 
+	
+.loader_percents
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	color: #fff
+	
+@keyframes load
+	from
+		-webkit-transform: rotate(0deg) 
+		transform: rotate(0deg) 
+	to
+		-webkit-transform: rotate(360deg) 
+		transform: rotate(360deg)
+	
+@-webkit-keyframes load
+	from
+		-webkit-transform: rotate(0deg) 
+		transform: rotate(0deg) 
+	to
+		-webkit-transform: rotate(360deg) 
+		transform: rotate(360deg)
+
+
 /* =================================*/
 /* 				Welcome: 			*/
 /* =================================*/
@@ -82,9 +158,13 @@
 	height: 100%
 	transform-style: preserve-3d
 	-webkit-transform-style: preserve-3d
-	transition: transform 1s
+	transition: transform 2s
+	transform-origin: top center
+	transform: rotateX(-40deg) translateY(-20px)
 	&.flipped
 		transform: rotateY(180deg)
+	&.loaded
+		transform: rotateX(0deg) translateY(0px)
 	
 .flip-card_front
 	width: 100%
@@ -97,6 +177,8 @@
 	z-index: 1 
 	-webkit-transform: rotateY(0deg)
 	transform: rotateY(0deg)
+	-webkit-backface-visibility: hidden
+	backface-visibility: hidden
 	
 
 .user_img
@@ -196,11 +278,13 @@
 	border-radius: 5px
 	overflow: hidden 
 	text-align: center 
-	position: relative
+	position: absolute
+	top: 0
 	z-index: 1
-	display: none 
 	-webkit-transform: rotateY(180deg)
 	transform: rotateY(180deg)
+	-webkit-backface-visibility: hidden
+	backface-visibility: hidden
 	
 .login
 	color: #455A64
@@ -326,7 +410,8 @@
 	margin: 0 
 	width: 100%
 	display: table  
-	margin-top: 14px
+	position: absolute
+	bottom: 0 
 
 .button_item
 	display: table-cell

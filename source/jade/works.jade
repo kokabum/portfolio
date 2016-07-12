@@ -4,6 +4,9 @@ doctype html
 html
 	include common/_head
 	body
+		.preloader
+			.loader_round
+			.loader_percents
 		+hamburger_menu
 		.wrapper_works
 			header.header
@@ -25,26 +28,58 @@ html
 					svg.works_svg
 						use(xlink:href="img/svg-sprite.svg#works_header")
 
-
+			
 			section.portfolio
+			
 				.portfolio_slider
 					img.works_img(src="img/works/work1.png")
 				.portfolio_description
-					.project
-						.project_name Сайт школы онлайн образования
-						.project_skills HTML, CSS, JAVASCRIPT
-						a.project_link(href="#") Посмотреть сайт
+					.portfolio_wrapper
+						ul.project_list
+							li.project_item.active
+								.project_name Сайт школы онлайн образования
+								.project_skills HTML, CSS, JAVASCRIPT
+								a.project_link(href="http://loftschool.com") Посмотреть сайт
+							li.project_item
+								.project_name Gulp
+								.project_skills HTML, CSS, JS, NODE.JS
+								a.project_link(href="http://gulpjs.com") Посмотреть сайт
+							li.project_item
+								.project_name Jade
+								.project_skills HTML, JADE, CSS, JS
+								a.project_link(href="http://jade-lang.com") Посмотреть сайт
+							li.project_item
+								.project_name Sass
+								.project_skills HTML, CSS, JS, PHP
+								a.project_link(href="http://sass-lang.com") Посмотреть сайт
 				.portfolio_controls
 					.controls_prev
 						svg.portf_arrow.arrow_down
 							use(xlink:href="img/svg-sprite.svg#portf_arrow_down")
-						.works_controls
-							img.works_img(src="img/works/work2.jpg")
+						.works_controls.slider_prev
+							ul.controls_list
+								li.controls_item
+									img.controls_img(src="img/works/work1.png" alt="")
+								li.controls_item
+									img.controls_img(src="img/works/gulp.png" alt="")
+								li.controls_item
+									img.controls_img(src="img/works/jade.png" alt="")
+								li.controls_item.active
+									img.controls_img(src="img/works/sass.png" alt="")
 					.controls_next
 						svg.portf_arrow.arrow_up
 							use(xlink:href="img/svg-sprite.svg#portf_arrow_up")
-						.works_controls
-							img.works_img(src="img/works/work3.jpg")
+						.works_controls.slider_next
+							ul.controls_list
+								li.controls_item
+									img.controls_img(src="img/works/work1.png" alt="")
+								li.controls_item.active
+									img.controls_img(src="img/works/gulp.png" alt="")
+								li.controls_item
+									img.controls_img(src="img/works/jade.png" alt="")
+								li.controls_item
+									img.controls_img(src="img/works/sass.png" alt="")
+
 			section.talks
 				.talks_title
 					h2.about_title_txt Что обо мне говорят
@@ -71,9 +106,9 @@ html
 					.blur
 					.feedback_wrapper
 						h2.feedback_title Связаться со мной
-						input.feedback_field(type="text" name="name" placeholder="Имя")
-						input.feedback_field(type="text" name="email" placeholder="Email")
-						textarea.feedback_field.feedback_textarea(name="message" placeholder="Ваше сообщение")
+						input.feedback_field(type="text" name="name" placeholder="Имя" maxlength="15")
+						input.feedback_field(type="text" name="email" placeholder="Email" maxlength="30")
+						textarea.feedback_field.feedback_textarea(name="message" placeholder="Ваше сообщение" maxlength="150")
 					.feedback_buttons
 						input.button(type="submit" value="Отправить")
 						input.button(type="reset" value="Очистить")

@@ -1,10 +1,10 @@
 // Skills Pie Charts
-mixin pie_chart(skill)
+mixin pie_chart(skill, percent)
 	.group_item
 		span.item_name=skill
 		svg.g-circles(width="125" height="125")
 			circle(r="50" cx="65" cy="65" stroke="#ccc" fill="none")
-			circle.sector(r="50" cx="65" cy="65" stroke="#10C1A8" transform="rotate(-90 65 65)")
+			circle.sector.circle_percent(data-percent=percent r="50" cx="65" cy="65" stroke="#10C1A8" transform="rotate(-90 65 65)" stroke-dasharray="408" stroke-dashoffset="408")
 
 
 

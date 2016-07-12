@@ -5,7 +5,11 @@ doctype html
 html
 	include common/_head
 	body
+		.preloader
+			.loader_round
+			.loader_percents
 		include common/_gmap
+		+hamburger_menu
 		.wrapper_works
 			header.header
 				+header_top
@@ -36,7 +40,7 @@ html
 					p.skills_text Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
 					.skills_group
 						.group_name Frontend
-						+pie_chart("Html5")
+						+pie_chart("Html5", "90")
 						+pie_chart("CSS3")
 						+pie_chart("JavaScript & jQuery")
 					.skills_group

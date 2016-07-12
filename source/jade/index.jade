@@ -2,6 +2,9 @@ doctype html
 html
 	include common/_head
 	body.animate
+		.preloader
+			.loader_round
+			.loader_percents
 		.parallax
 			- var parallax = ["img/parallax/layer-0.png", "img/parallax/layer-1.png" ,"img/parallax/layer-2.png", "img/parallax/layer-3.png", "img/parallax/layer-4.png", "img/parallax/layer-5.png", "img/parallax/layer-6.png", "img/parallax/layer-7.png", "img/parallax/layer-8.png", "img/parallax/layer-9.png"]
 			each p_url in parallax
@@ -33,19 +36,19 @@ html
 										a.item_link(href=p_url)= p_name
 								
 						.flip-card_back
-							form.login
+							form.login(id="login")
 								.login-form
 									h2.login_title Авторизуйтесь
 									label.login-form_label
 										span.login-form_icon
 											svg.login_svg
 												use(xlink:href="img/svg-sprite.svg#login")
-										input(class="login-form_input" type="txt" name="login" placeholder="Логин" tabindex="1")
+										input(class="login-form_input" type="txt" name="login" placeholder="Логин" tabindex="1" maxlength="15")
 									label.login-form_label
 										span.login-form_icon
 											svg.login_svg
 												use(xlink:href="img/svg-sprite.svg#password")
-										input(class="login-form_input" type="password" name="pass" placeholder="Пароль" tabindex="2")
+										input(class="login-form_input" type="password" name="pass" placeholder="Пароль" tabindex="2" maxlength="15")
 									label.login-form_label
 										input(type="checkbox" name="robot_check" value="not a robot" class="input_checkbox")
 										span.checkbox
@@ -63,7 +66,7 @@ html
 									li.button_item
 										input.login_button(type="reset" tabindex="6" value="На главную" id="login_home")
 									li.button_item
-										input.login_button(type="submit" tabindex="7" value="Войти" id="login_enter")
+										input.login_button(type="submit" tabindex="7" value="Войти" id="login_enter" form="login")
 			footer(class="footer_welcome")
 				.footer_text
 					span.copyright © Денис Детко
