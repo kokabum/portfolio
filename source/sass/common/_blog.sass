@@ -79,9 +79,15 @@
 	float: left 
 	box-sizing: border-box
 	padding: 12px 14px 0 21px 
+	position: relative 
 	+tablet
 		float: none
 		display: none 
+		
+.fixed
+	position: fixed
+	top: 0 
+	width: 25% 
 
 .chapters_list
 	text-align: right
@@ -98,6 +104,10 @@
 	&:hover
 		color: #00BFA5
 		border-right: 3px solid #00BFA5
+
+.chapters_link_active
+	color: #00BFA5
+	border-right: 3px solid #00BFA5
 		
 .blog_posts
 	width: 75% 

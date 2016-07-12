@@ -301,6 +301,32 @@ $(document).ready(function(){
 
 });
 
+
+
+/*========================*/
+/*        Blog scroll     */
+/*========================*/
+
+$(document).scroll(function () {
+  var blogOffsetTop = $('.blog').offset().top;
+  if($(document).scrollTop() >= blogOffsetTop){
+    $('.chapters_list').css({
+      "position": "fixed",
+      "top": "0",
+      "width": "25%"
+    });
+  }
+
+  if($(document).scrollTop() < blogOffsetTop){
+    $('.chapters_list').css({
+      "position": "absolute",
+      "top": "0",
+      "width": "100%"
+    });
+  }
+});
+
+
 /*========================*/
 /*        Skills          */
 /*========================*/
@@ -314,7 +340,3 @@ $(document).scroll(function () {
   });
   }
 });
-
-/*========================*/
-/*        login form      */
-/*========================*/

@@ -23,29 +23,31 @@ html
 			section.blog
 				.blog_chapters
 					ul.chapters_list
-						- var chapters = ["Самое важное в SASS", "Приёмы в вёрстке, без которых не обходится ни один сайт", "Самый необходимый набор Gulp плагинов", "Почему я выбрал Jade"]
-						each c_name in chapters
+						li.chapters_item
+								a.chapters_link.chapters_link_active(href="#sass") Самое важное в SASS
+						- var chapters = {"Приёмы в вёрстке, без которых не обходится ни один сайт" : "#tricks", "Самый необходимый набор Gulp плагинов" : "#gulp", "Почему я выбрал Jade" : "#jade"}
+						each c_url, c_name in chapters
 							li.chapters_item
-								a.chapters_link(href="#")=c_name
+								a.chapters_link(href=c_url)=c_name
 				.blog_posts
-					.blog_article
+					.blog_article(data-section="sass")
 						h2.article_title Самое важное в Sass
 						p.article_date 22 июня 2016
-						p.article_text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aliquid repellat, adipisci sit dolorum et a officia, minima consequuntur commodi, veritatis qui recusandae, voluptate quibusdam omnis delectus fuga placeat neque.
-						p.article_text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aliquid repellat, adipisci sit dolorum et a officia, minima consequuntur commodi, veritatis qui recusandae, voluptate quibusdam omnis delectus fuga placeat neque.
-					.blog_article
+						p.article_text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aliquid repellat, adipisci sit dolorum et a officia, minima consequuntur commodi, veritatis qui recusandae, voluptate quibusdam omnis delectus fuga placeat neque.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aliquid repellat, adipisci sit dolorum et a officia, minima consequuntur commodi, veritatis qui recusandae, voluptate quibusdam omnis delectus fuga placeat neque.
+						p.article_text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aliquid repellat, adipisci sit dolorum et a officia, minima consequuntur commodi, veritatis qui recusandae, voluptate quibusdam omnis delectus fuga placeat neque.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aliquid repellat, adipisci sit dolorum et a officia, minima consequuntur commodi, veritatis qui recusandae, voluptate quibusdam omnis delectus fuga placeat neque.
+					.blog_article(data-section="tricks")
 						h2.article_title Приёмы в вёрстке, без которых не обходится ни один сайт
 						p.article_date 21 июня 2016
-						p.article_text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aliquid repellat, adipisci sit dolorum et a officia, minima consequuntur commodi, veritatis qui recusandae, voluptate quibusdam omnis delectus fuga placeat neque.
-						p.article_text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aliquid repellat, adipisci sit dolorum et a officia, minima consequuntur commodi, veritatis qui recusandae, voluptate quibusdam omnis delectus fuga placeat neque.
-					.blog_article
+						p.article_text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aliquid repellat, adipisci sit dolorum et a officia, minima consequuntur commodi, veritatis qui recusandae, voluptate quibusdam omnis delectus fuga placeat neque.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aliquid repellat, adipisci sit dolorum et a officia, minima consequuntur commodi, veritatis qui recusandae, voluptate quibusdam omnis delectus fuga placeat neque.
+						p.article_text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aliquid repellat, adipisci sit dolorum et a officia, minima consequuntur commodi, veritatis qui recusandae, voluptate quibusdam omnis delectus fuga placeat neque.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aliquid repellat, adipisci sit dolorum et a officia, minima consequuntur commodi, veritatis qui recusandae, voluptate quibusdam omnis delectus fuga placeat neque.
+					.blog_article(data-section="gulp")
 						h2.article_title Самый необходимый набор Gulp плагинов
 						p.article_date 20 июня 2016
-						p.article_text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aliquid repellat, adipisci sit dolorum et a officia, minima consequuntur commodi, veritatis qui recusandae, voluptate quibusdam omnis delectus fuga placeat neque.
-						p.article_text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aliquid repellat, adipisci sit dolorum et a officia, minima consequuntur commodi, veritatis qui recusandae, voluptate quibusdam omnis delectus fuga placeat neque.
-					.blog_article
+						p.article_text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aliquid repellat, adipisci sit dolorum et a officia, minima consequuntur commodi, veritatis qui recusandae, voluptate quibusdam omnis delectus fuga placeat neque.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aliquid repellat, adipisci sit dolorum et a officia, minima consequuntur commodi, veritatis qui recusandae, voluptate quibusdam omnis delectus fuga placeat neque.
+						p.article_text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aliquid repellat, adipisci sit dolorum et a officia, minima consequuntur commodi, veritatis qui recusandae, voluptate quibusdam omnis delectus fuga placeat neque.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aliquid repellat, adipisci sit dolorum et a officia, minima consequuntur commodi, veritatis qui recusandae, voluptate quibusdam omnis delectus fuga placeat neque.
+					.blog_article(data-section="jade")
 						h2.article_title Почему я выбрал Jade
 						p.article_date 19 июня 2016
-						p.article_text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aliquid repellat, adipisci sit dolorum et a officia, minima consequuntur commodi, veritatis qui recusandae, voluptate quibusdam omnis delectus fuga placeat neque.
-						p.article_text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aliquid repellat, adipisci sit dolorum et a officia, minima consequuntur commodi, veritatis qui recusandae, voluptate quibusdam omnis delectus fuga placeat neque.
+						p.article_text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aliquid repellat, adipisci sit dolorum et a officia, minima consequuntur commodi, veritatis qui recusandae, voluptate quibusdam omnis delectus fuga placeat neque.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aliquid repellat, adipisci sit dolorum et a officia, minima consequuntur commodi, veritatis qui recusandae, voluptate quibusdam omnis delectus fuga placeat neque.
+						p.article_text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aliquid repellat, adipisci sit dolorum et a officia, minima consequuntur commodi, veritatis qui recusandae, voluptate quibusdam omnis delectus fuga placeat neque.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aliquid repellat, adipisci sit dolorum et a officia, minima consequuntur commodi, veritatis qui recusandae, voluptate quibusdam omnis delectus fuga placeat neque.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aliquid repellat, adipisci sit dolorum et a officia, minima consequuntur commodi, veritatis qui recusandae, voluptate quibusdam omnis delectus fuga placeat neque.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aliquid repellat, adipisci sit dolorum et a officia, minima consequuntur commodi, veritatis qui recusandae, voluptate quibusdam omnis delectus fuga placeat neque.
 		include common/_footer
