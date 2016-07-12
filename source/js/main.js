@@ -318,15 +318,3 @@ $(document).scroll(function () {
 /*========================*/
 /*        login form      */
 /*========================*/
-(function() {
-  var loginForm = $(".login");
-  loginForm.submit(function(e) {
-      var loginCheck = loginForm.find('.input_checkbox');
-      var loginRadio = loginForm.find('.input_radio');
-      if (!loginCheck.prop('checked') || !loginRadio.prop('checked')) {
-          e.preventDefault();
-          validText.text("Роботам тут не место");
-          validBlock.show();
-      }
-  });
-})();
