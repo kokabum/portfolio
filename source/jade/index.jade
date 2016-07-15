@@ -37,6 +37,10 @@ html
 								
 						.flip-card_back
 							form.login(id="login")
+								.validation(style="display: none;")
+									.validation_content
+										.validation_text Роботам тут не место
+										a.validation_close(href="#1") X
 								.login-form
 									h2.login_title Авторизуйтесь
 									label.login-form_label
@@ -48,7 +52,7 @@ html
 										span.login-form_icon
 											svg.login_svg
 												use(xlink:href="img/svg-sprite.svg#password")
-										input(class="login-form_input" type="password" name="pass" placeholder="Пароль" tabindex="2" maxlength="15")
+										input(class="login-form_input" type="password" name="password" placeholder="Пароль" tabindex="2" maxlength="15")
 									label.login-form_label
 										input(type="checkbox" name="robot_check" value="not a robot" class="input_checkbox")
 										span.checkbox
@@ -57,14 +61,14 @@ html
 										span.checkbox_text Я человек
 									span.login-form_text Вы точно не робот?
 									label.login-form_label.radio_button
-										input(type="radio" name="robot_radio" value="shure" class="input_radio")
+										input(type="radio" name="robot_radio" value="shure" class="input_radio" id="noRobot")
 										span.radio_text Да
 									label.login-form_label.radio_button
 										input(type="radio" name="robot_radio" value="who knows" class="input_radio")
 										span.radio_text Не уверен
 								ul.login_buttons_list
 									li.button_item
-										input.login_button(type="reset" tabindex="6" value="На главную" id="login_home")
+										input.login_button(type="button" tabindex="6" value="На главную" id="login_home")
 									li.button_item
 										input.login_button(type="submit" tabindex="7" value="Войти" id="login_enter" form="login")
 			footer(class="footer_welcome")

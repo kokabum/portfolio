@@ -103,11 +103,15 @@ html
 								p Зар Захаров
 								p главный преподаватель
 				form.feedback_form
+					.validation(style="display: none;")
+						.validation_content
+							.validation_text Введите все поля формы
+							a.validation_close(href="#1") X
 					.blur
 					.feedback_wrapper
 						h2.feedback_title Связаться со мной
 						input.feedback_field(type="text" name="name" placeholder="Имя" maxlength="15")
-						input.feedback_field(type="text" name="email" placeholder="Email" maxlength="30")
+						input.feedback_field.feedback_email(type="text" name="email" placeholder="Email" maxlength="30")
 						textarea.feedback_field.feedback_textarea(name="message" placeholder="Ваше сообщение" maxlength="150")
 					.feedback_buttons
 						input.button(type="submit" value="Отправить")
