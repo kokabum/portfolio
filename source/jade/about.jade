@@ -38,22 +38,23 @@ html
 				.skills
 					h2.skills_title Чем я могу быть вам полезен
 					p.skills_text Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
-					.skills_group
-						.group_name Frontend
-						+pie_chart("Html5", "90")
-						+pie_chart("CSS3")
-						+pie_chart("JavaScript & jQuery")
-					.skills_group
-						.group_name Backend
-						+pie_chart("PHP")
-						+pie_chart("mySQL")
-						+pie_chart("Node.js & npm")
-						+pie_chart("Mongo.db")
-					.skills_group
-						.group_name WorkFlow
-						+pie_chart("Git")
-						+pie_chart("Gulp")
-						+pie_chart("Bower")
+					ul.skills_list
+						li.skills_group
+							.group_name Frontend
+							+pie_chart("Html5", "90")
+							+pie_chart("CSS3")
+							+pie_chart("JavaScript & jQuery")
+						li.skills_group
+							.group_name Backend
+							+pie_chart("PHP")
+							+pie_chart("mySQL")
+							+pie_chart("Node.js & npm")
+							+pie_chart("Mongo.db")
+						li.skills_group
+							.group_name WorkFlow
+							+pie_chart("Git")
+							+pie_chart("Gulp")
+							+pie_chart("Bower")
 			section.contacts_wrapper
 				.contacts_map
 					#map_wrapper
