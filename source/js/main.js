@@ -329,19 +329,28 @@ $(document).scroll(function () {
     var blogOffsetTop = $('.blog').offset().top;
   }
   if($(document).scrollTop() >= blogOffsetTop){
+    $('.chapters_list').addClass('fixed');
+    $('.chapters_list').removeClass('unfixed');
+/*
     $('.chapters_list').css({
       "position": "fixed",
       "top": "0",
       "width": "25%"
     });
+    */
   }
 
   if($(document).scrollTop() < blogOffsetTop){
+    $('.chapters_list').removeClass('fixed');
+    $('.chapters_list').addClass('unfixed');
+
+/*
     $('.chapters_list').css({
       "position": "absolute",
       "top": "0",
       "width": "100%"
     });
+    */
   }
 
 
@@ -433,4 +442,15 @@ $(document).ready(function() {
       });
     }
   })();
+});
+
+
+/* =================================*/
+/*           Blog trigger:          */
+/* =================================*/
+
+$(function() {
+  $('.blog_trigger').on('click', function() {
+      $('.blog_chapters').toggleClass('blog_chapters_hidden')
+  });
 });
