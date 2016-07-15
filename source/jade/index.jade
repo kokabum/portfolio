@@ -14,6 +14,10 @@ html
 			header.header_welcome
 				a(href="#" class="authorization") Авторизоваться
 			.main
+				.validation(style="display: none;")
+					.validation_content
+						.validation_text Роботам тут не место
+						a.validation_close(href="#1") X
 				.welcome
 					.flip-card
 						.flip-card_front
@@ -37,10 +41,7 @@ html
 								
 						.flip-card_back
 							form.login(id="login")
-								.validation(style="display: none;")
-									.validation_content
-										.validation_text Роботам тут не место
-										a.validation_close(href="#1") X
+								
 								.login-form
 									h2.login_title Авторизуйтесь
 									label.login-form_label
