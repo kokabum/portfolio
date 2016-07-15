@@ -16,28 +16,31 @@ $(window).on('mousemove', function(e){
 			'transform': 'translate3d(' + widthPosition + 'px, ' + heightPosition + 'px, 0)'
 		})
 	})
-})
+});
 
 
 /* =================================*/
 /* 			Hamburger menu: 		        */
 /* =================================*/
 
-var link = $('.nav_menu')
+(function () {
+  var link = $('.nav_menu');
 
-	link.click(function(event) {
-		link.toggleClass('clicked');
+  link.click(function(event) {
+    
+    link.toggleClass('clicked');
 
-		if ($(this).hasClass('clicked')) {
-			$('.main-menu').css('visibility', 'visible');
-			$('html, body').css('overflow', 'hidden');
-		} else {
-			$('.main-menu').css('visibility', 'hidden');
-			$('html, body').css('overflow', 'auto');
-		}
+    if ($(this).hasClass('clicked')) {
+      $('.main-menu').css('visibility', 'visible');
+      $('html, body').css('overflow', 'hidden');
+    } else {
+      $('.main-menu').css('visibility', 'hidden');
+      $('html, body').css('overflow', 'auto');
+    }
 
-	});
+  });
 
+})();
 
 /* =================================*/
 /* 			        Scroll              */
@@ -306,12 +309,14 @@ $(document).ready(function(){
 /*========================*/
 
 $(document).scroll(function () {
-  var aboutOffsetTop = $('.about_bg').offset().top;
+  if ($(".about_me").length) {
+    var aboutOffsetTop = $('.skills').offset().top;
+  }
   if($(document).scrollTop() >= aboutOffsetTop){
     $('.sector').css({
       "transition": "all 3s",
       "stroke-dashoffset": "200"
-  });
+    });
   }
 });
 
@@ -320,7 +325,9 @@ $(document).scroll(function () {
 /*========================*/
 
 $(document).scroll(function () {
-  var blogOffsetTop = $('.blog').offset().top;
+  if ($(".wrapper_works").length){
+    var blogOffsetTop = $('.blog').offset().top;
+  }
   if($(document).scrollTop() >= blogOffsetTop){
     $('.chapters_list').css({
       "position": "fixed",
@@ -337,34 +344,93 @@ $(document).scroll(function () {
     });
   }
 
-  var articles = $(".chapters_item ");
-  var contents = $(".chapters_link")
-  var contentsActive = $(".chapters_link_active");
-  var scrollTops = [];
-  for (i = 0; i < articles.length; i++) {
-    if ($(articles[i]).offset().top <= $(window).scrollTop()) {
-      contentsActive.removeClass(".chapters_link_active");
-      $(contents[i]).addClass(".chapters_link_active");
-      contentsActive = $(contents[i]);
+
+  $(".blog_article").each(function () {
+    if (($(document).scrollTop() - $(this).offset().top) >= 0){
+      $(".chapters_item").each(function () {
+        $(this).removeClass('chapters_link_active');
+      });
+      var currentLink = $(".chapters_link[href=\'#" + $(this).attr('id') + "\']");
+      currentLink.parent().addClass('chapters_link_active');
     }
-  };
+  });
+
 });
 
+$(".chapters_link").on("click", function (event) {
+  event.preventDefault();
+  var id  = $(this).attr('href'),
+    top = $(id).offset().top;
+  $('body,html').animate({scrollTop: top}, 500);
+});
 
-$('.chapters_list .chapters_link').on('click',function (e) {
+/*==========================*/
+/*        Validate Form     */
+/*==========================*/
+
+$(document).ready(function() {
+
+  function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+  }
+
+  var validBlock = $('.validation')
+    , validContent = validBlock.find('.validation_content')
+    , validText = validContent.find('.validation_text')
+    , validClose = validContent.find('.validation_close');
+
+  validClose.on("click", function(e) {
     e.preventDefault();
-    showSection($(this).attr('href'),true);
-});
+    validBlock.hide();
+  });
 
-function showSection(section, isAnimate) {
-    var direction = section.replace(/#/, ''),
-        reqSection = $('.blog_article').filter('[data-section="'+direction+'"]'),
-        reqSectionPos = reqSection.offset().top;
+  (function() {
+    var loginForm = $(".login");
 
-    if (isAnimate) {
-        $('body,html').animate({scrollTop:reqSectionPos},500 );
-    } else {
-        $('body,html').scrollTop(reqSectionPos);
+    loginForm.submit(function(e) {
+      var loginCheck = loginForm.find('.robot_check');
+      var loginRadio = loginForm.find('#noRobot');
+
+      if (!loginCheck.prop('checked') || !loginRadio.prop('checked')) {
+        e.preventDefault();
+        validText.text("Роботам тут не место");
+        validBlock.show();
+      }
+    });
+  })();
+
+  (function() {
+    var feedback = $('.feedback_form');
+
+    if (feedback.length) {
+      feedback.submit(function(e) {
+        e.preventDefault();
+        var feedbackInput = $(this).find('.feedback_field'),
+          feedbackArea = $(this).find('.feedback_textarea');
+
+        var isFill = function(selector) {
+          var flag = true;
+
+          selector.each(function() {
+            if ($(this).val().length == 0) {
+              flag = false;
+            }
+          });
+
+          return flag;
+        };
+
+        if (!isFill(feedbackInput) || !isFill(feedbackArea)) {
+          validText.text("Введите все поля формы");
+          validBlock.show();
+        } else if (!validateEmail(feedbackInput.closest('.feedback_email').val())) {
+          validText.text("Не верный Email");
+          validBlock.show();
+        } else {
+          validText.text("Данные отправлены");
+      }
+      });
     }
-}
-
+  })();
+});
