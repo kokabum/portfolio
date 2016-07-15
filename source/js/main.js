@@ -439,3 +439,44 @@ $(function() {
       $('.blog_chapters').toggleClass('blog_chapters_hidden')
   });
 });
+
+
+/* =================================*/
+/*         Scroll header bg:        */
+/* =================================*/
+
+$(window).scroll(function(){
+  var wScroll = $(window).scrollTop();
+
+  (function(){
+
+    var
+      bg = $('.header_bg'),
+      sectionText = $('.header_svg'),
+      user = $('.info-box_user');
+
+    slideIt(bg, -wScroll / 45);
+    slideItSectionText(sectionText, wScroll / 30);
+    slideIt(user, wScroll / 3);
+      
+    function slideIt(block, strafeAmount){
+      var strafe = -strafeAmount + '%',
+          transformString = 'translate3d(0,' + strafe + ',0)';
+
+      block.css({
+        'transform' : transformString
+      });
+    }
+
+    function slideItSectionText(block, strafeAmount){
+      var strafe = -strafeAmount + '%',
+          transformString = 'translate3d(-50%,' + strafe + ',0)';
+
+      block.css({
+        'transform' : transformString
+      });
+    }
+
+
+  }());
+});
