@@ -476,7 +476,5 @@ $(window).scroll(function(){
         'transform' : transformString
       });
     }
-
-
   }());
 });
