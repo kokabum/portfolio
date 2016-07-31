@@ -1,0 +1,237 @@
+html
+	box-sizing: border-box
+
+*, *:before, *:after
+	box-sizing: inherit
+
+html,
+body
+	height: 100%
+	min-width: 320px
+	position: relative
+	font-size: 100%
+	font-family: "Roboto_medium", sans-serif
+
+ul,
+li
+	list-style: none
+	list-style-type: none
+	margin: 0
+	padding: 0
+
+img
+	max-width: 100%
+	
+
+.admin-page
+	height: 100%
+	display: flex
+	flex-direction: column
+	background-image: url("../img/admin_bg.png")
+	background-position: center bottom
+	background-size: cover
+	background-repeat: no-repeat
+	
+.admin_header
+	background-color: #00bfa5
+	padding: 30px 30px
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+	font-family: "roboto_medium", sans-serif
+	
+.header__title-wrapper
+
+.header__title
+	color: #fff
+	font-size: 1.75em
+	font-weight: normal
+	line-height: 1
+	margin: 0
+	font-family: "roboto_medium", sans-serif
+	
+.header__link-wrapper
+	margin-left: auto
+
+.header__link
+	color: #fff
+	font-size: 1em
+	margin-left: 30px
+	&:first-child
+		margin-left: 0
+		
+.tabs-control
+	display: flex
+	background-color: #f0efe9
+	
+.tabs-control__item
+	flex-basis: 160px
+	text-transform: uppercase
+	color: #455a64
+	padding: 15px 20px
+	text-align: center
+	border-right: 2px solid #fff
+	cursor: pointer
+	transition: background-color .7s
+	&:hover
+		background-color: rgba(#fff, .5)
+	&.active
+		background-color: #fff
+
+.tabs-content
+	flex: 1
+	background-color: rgba(#fff, .8)
+	position: relative
+	overflow-y: scroll
+	overflow-x: hidden
+	
+.tabs-content__item
+	padding: 30px
+	position: absolute
+	display: none
+	width: 100%
+	&.active
+		display: block
+		
+
+.form__heading
+	font-size: 21px
+	line-height: 1.5
+	margin: 0
+	color: #455a64
+	font-family: "roboto_medium", sans-serif
+	text-align: left
+
+.form__subtitle
+	font-size: 16px
+	margin-top: 30px
+	color: #455a64
+	font-family: "roboto_medium", sans-serif
+	text-align: left
+	
+.form__field
+	border: 0
+	border-radius: 5px
+	padding: 10px 15px
+	margin-top: 10px
+	width: 300px
+	display: block
+
+.form__field_file
+	display: none
+	
+.form__field_image-preview
+	background-color: #fff
+	height: 150px
+	position: relative
+	text-align: center
+	img
+		position: relative
+		max-height: 100%
+	.fa
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%,-50%)
+		font-size: 24px
+		color: #455a64
+		
+.form__button
+	background-color: #00bfa5
+	border: none
+	display: block
+	border-radius: 5px
+	color: #fff
+	padding: 10px 15px
+	margin-top: 30px
+	cursor: pointer
+
+.file-label
+	color: #00bfa5
+	display: inline-block
+	margin-top: 10px
+	vertical-align: middle
+	padding: 10px 0 15px 50px
+	background-repeat: no-repeat
+	background-position: left center
+	background-size: 40px 40px
+	cursor: pointer
+
+.mce-tinymce
+	margin-top: 10px 
+	overflow: hidden 
+	border: none 
+	border-radius: 5px
+	max-width: 600px 
+	
+.skills_admin
+	display: flex
+	flex-wrap: wrap
+	
+.skills__heading
+	font-size: 16px
+	font-weight: bold
+	margin-top: 10px
+	padding: 5px 0
+	color: #455a64
+	border: 2px inset transparent
+	background: none
+	border-radius: 5px
+	transition: all .3s
+	cursor: pointer
+	&:focus
+		cursor: text
+		outline: none
+		background: #fff
+		padding: 5px 5px
+		
+.skills__block
+	width: 33.33333%
+	padding: 10px 2px
+	border-radius: 5px
+	border: 1px dashed transparent
+	position: relative
+	transition: border-color .3s, background-color .3s
+
+.skills__list
+	width: 100%
+
+.skill
+	margin-top: 10px
+	width: 100%
+	display: flex
+	align-items: center
+	font-family: "roboto_regular", sans-serif
+	
+.skill__name
+	color: #455a64
+	width: 50%
+	margin-left: 4%
+	padding: 5px
+	vertical-align: middle
+	border: 2px inset transparent
+	background: none
+	border-radius: 5px
+	transition: all .3s
+	cursor: pointer
+	
+	&:focus
+		cursor: text
+		outline: none
+		background: #fff
+		
+.skill__percentage
+	width: 18%
+	margin: 0 1%
+	padding: 10px 5px
+	border: 0
+	text-align: right
+	border-radius: 5px
+	
+.skill__misc
+	position: relative
+	display: block
+	
+.skill__percent-sign
+	padding: 0 5px
+

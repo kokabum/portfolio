@@ -1,0 +1,67 @@
+include common/_mixins
+doctype html
+html(lang="ru")
+	include common/_head
+	body
+		.admin-page
+			.admin_header
+				.header__title-wrapper
+					h1.header__title Панель администрирования
+				.header__link-wrapper
+					a.header__link.preload-link(href="/" title="Вернуться на сайт") Вернуться на сайт
+
+			ul.tabs-control
+				li.tabs-control__item.active Навыки
+				li.tabs-control__item Блог
+				li.tabs-control__item Работы
+
+			ul.tabs-content
+				
+				li.tabs-content__item.active
+					form
+						.form
+							h2.form__heading Обо мне
+							.skills_admin
+								.skills__block
+									+skills_heading("Frontend")
+									ul.skills__list
+										+skill_input("Html", 99)
+										+skill_input("CSS", 70)
+										+skill_input("JavaScript", 70)
+								.skills__block
+									+skills_heading("Backend")
+									ul.skills__list
+										+skill_input("Php", 60)
+										+skill_input("MySql", 70)
+										+skill_input("Node.js & npm", 10)
+										+skill_input("Mongo.db", 0)
+								.skills__block
+									+skills_heading("Workflow")
+									ul.skills__list
+										+skill_input("Git", 70)
+										+skill_input("Gulp", 80)
+										+skill_input("Bower", 90)
+							button.form__button(disabled) Сохранить
+				li.tabs-content__item
+					form
+						.form
+							h2.form__heading Блог
+							h3.form__subtitle Добавить запись
+							input.form__field(type="text", placeholder="Название", name="post-title")
+							input.form__field.form__field_date(type="text", placeholder="Дата", name="post-date")
+							textarea.form__field.form__field_textarea.tinymce-field(placeholder="Содержание", name="post-content")
+							button.form__button(disabled) Добавить
+				li.tabs-content__item
+					form(enctype="multipart/form-data")
+						.form
+							h2.form__heading Мои работы
+							h3.form__subtitle Добавить работу
+							input(type="hidden", name="action", value="saveWork")
+							input.form__field(type="text", placeholder="Название проекта", name="project-title")
+							input.form__field(type="text", placeholder="Технологии", name="project-tech")
+							input.form__field(type="text", placeholder="Ссылка", name="project-link")
+							label(class="file-label") Загрузить картинку
+								input.form__field.form__field_file(type="file", name="project-file")
+							.form__field.form__field_image-preview
+								.fa.fa-file-image-o
+							button.form__button Добавить
