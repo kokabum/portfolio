@@ -40,12 +40,12 @@ mixin hamburger_menu
 
 //- Admin skills
 mixin skills_heading(title)
-	.skills__heading=title
+	.skills_heading=title
 
 mixin skill_input(title, percentage)
 	li.skill
-		.skill__name=title
-		input.skill__percentage(type="number", min="0", max="100", step="0.5", value=percentage)
-		span.skill__misc
-			span.skill__percent-sign %
-			span.skill__remove.fa.fa-close
+		.skill_name=title
+		input.skill_percentage(type="number", min="0", max="100", step="0.5", value=percentage)
+		span.skill_misc
+			span.skill_percent-sign %
+			span.skill_remove.fa.fa-close

@@ -5,63 +5,63 @@ html(lang="ru")
 	body
 		.admin-page
 			.admin_header
-				.header__title-wrapper
-					h1.header__title Панель администрирования
-				.header__link-wrapper
-					a.header__link.preload-link(href="/" title="Вернуться на сайт") Вернуться на сайт
+				.header_title-wrapper
+					h1.header_title Панель администрирования
+				.header_link-wrapper
+					a.header_link.preload-link(href="/" title="Вернуться на сайт") Вернуться на сайт
 
 			ul.tabs-control
-				li.tabs-control__item.active Навыки
-				li.tabs-control__item Блог
-				li.tabs-control__item Работы
+				li.tabs-control_item.active Навыки
+				li.tabs-control_item Блог
+				li.tabs-control_item Работы
 
 			ul.tabs-content
 				
-				li.tabs-content__item.active
+				li.tabs-content_item.active
 					form
 						.form
-							h2.form__heading Обо мне
+							h2.form_heading Обо мне
 							.skills_admin
-								.skills__block
+								.skills_block
 									+skills_heading("Frontend")
-									ul.skills__list
+									ul.skills_list
 										+skill_input("Html", 50)
 										+skill_input("CSS", 50)
 										+skill_input("JavaScript", 50)
-								.skills__block
+								.skills_block
 									+skills_heading("Backend")
-									ul.skills__list
+									ul.skills_list
 										+skill_input("Php", 50)
 										+skill_input("MySql", 50)
 										+skill_input("Node.js & npm", 50)
 										+skill_input("Mongo.db", 50)
-								.skills__block
+								.skills_block
 									+skills_heading("Workflow")
-									ul.skills__list
+									ul.skills_list
 										+skill_input("Git", 50)
 										+skill_input("Gulp", 50)
 										+skill_input("Bower", 50)
-							button.form__button(disabled) Сохранить
-				li.tabs-content__item
+							button.form_button(disabled) Сохранить
+				li.tabs-content_item
 					form
 						.form
-							h2.form__heading Блог
-							h3.form__subtitle Добавить запись
-							input.form__field(type="text", placeholder="Название", name="post-title")
-							input.form__field.form__field_date(type="text", placeholder="Дата", name="post-date")
-							textarea.form__field.form__field_textarea.tinymce-field(placeholder="Содержание", name="post-content")
-							button.form__button(disabled) Добавить
-				li.tabs-content__item
+							h2.form_heading Блог
+							h3.form_subtitle Добавить запись
+							input.form_field(type="text", placeholder="Название", name="post-title")
+							input.form_field.form_field_date(type="text", placeholder="Дата", name="post-date")
+							textarea.form_field.form_field_textarea.tinymce-field(placeholder="Содержание", name="post-content")
+							button.form_button(disabled) Добавить
+				li.tabs-content_item
 					form(enctype="multipart/form-data")
 						.form
-							h2.form__heading Мои работы
-							h3.form__subtitle Добавить работу
+							h2.form_heading Мои работы
+							h3.form_subtitle Добавить работу
 							input(type="hidden", name="action", value="saveWork")
-							input.form__field(type="text", placeholder="Название проекта", name="project-title")
-							input.form__field(type="text", placeholder="Технологии", name="project-tech")
-							input.form__field(type="text", placeholder="Ссылка", name="project-link")
+							input.form_field(type="text", placeholder="Название проекта", name="project-title")
+							input.form_field(type="text", placeholder="Технологии", name="project-tech")
+							input.form_field(type="text", placeholder="Ссылка", name="project-link")
 							label(class="file-label") Загрузить картинку
-								input.form__field.form__field_file(type="file", name="project-file")
-							.form__field.form__field_image-preview
+								input.form_field.form_field_file(type="file", name="project-file")
+							.form_field.form_field_image-preview
 								.fa.fa-file-image-o
-							button.form__button Добавить
+							button.form_button Добавить
